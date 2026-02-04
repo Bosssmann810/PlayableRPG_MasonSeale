@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "C:\\mason unity\\PlayableRPG_MasonSeale\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MovementChecker.cs",
               "DocumentMoniker": "C:\\mason unity\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\MovementChecker.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\MovementChecker.cs",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Enemy.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAswAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T13:06:10.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T13:06:10.345Z"
             },
             {
               "$type": "Document",
@@ -78,20 +77,20 @@
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Player.cs",
               "ToolTip": "C:\\mason unity\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Player.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwBUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:57:43.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Position.cs",
               "DocumentMoniker": "C:\\mason unity\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Position.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Position.cs",
               "ToolTip": "C:\\mason unity\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Position.cs",
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Position.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:44:23.364Z",
               "EditorCaption": ""
@@ -106,8 +105,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Health.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:39:13.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:39:13.438Z"
             },
             {
               "$type": "Document",
@@ -119,8 +117,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Character.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:38:39.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:38:39.575Z"
             },
             {
               "$type": "Document",
@@ -132,8 +129,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:37:53.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:37:53.565Z"
             }
           ]
         }
