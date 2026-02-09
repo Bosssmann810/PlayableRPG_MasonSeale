@@ -34,11 +34,12 @@ namespace PlayableRPG_MasonSeale
 
             for (int i = 0; i < map.GetLength(0); i++)
             {
-                Console.WriteLine();
+                
                 for (int j = 0; j < map[i].Length; j++)
                 {
                     Console.Write(map[i][j]);
                 }
+                Console.WriteLine();
             }
         }
 

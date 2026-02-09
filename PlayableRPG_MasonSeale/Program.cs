@@ -17,7 +17,7 @@ namespace PlayableRPG_MasonSeale
             MovementChecker refferee = new MovementChecker();
             map.SetBoundries();
             while (true)
-            {
+            { 
                 map.Update();
                 player.Update();
                 enemy.Update();
@@ -27,6 +27,7 @@ namespace PlayableRPG_MasonSeale
                 enemy.Move();
                 refferee.EnemyAttackDetection(player, enemy);
                 refferee.EnemyBoundCheck(enemy, map);
+                Console.WriteLine(player.GetPlayerX().ToString());
                 Console.Clear();
             }
 

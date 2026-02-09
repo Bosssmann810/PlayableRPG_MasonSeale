@@ -6,3 +6,4 @@ C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableR
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe.config
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\map.txt

@@ -30,7 +30,7 @@ namespace PlayableRPG_MasonSeale
         }
         public void SetposX(int newX)
         {
-            _y = newX;
+            _x = newX;
         }
     }
 }

@@ -69,7 +69,9 @@ namespace PlayableRPG_MasonSeale
         //this function will be in anything that needs to be updated, and they will all be placed into the update method in the main program.
         public override void Update()
         {
-            base.Update();
+            Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY());
+            Console.ForegroundColor = _color;
+            Console.Write(_icon);
         }
         public Position PositionCheck()
         {
