@@ -1,0 +1,8 @@
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe.config
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.pdb
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
+C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe.config

@@ -12,7 +12,7 @@ namespace PlayableRPG_MasonSeale
         Position _oldPos;
     
 
-        public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP, ConsoleColor playerColor, string playerIcon, int playerDamage ) : base(startingXPos, startingYPos, maxHP, playerColor, playerIcon, playerDamage)
+        public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
         {
             
         }
@@ -70,6 +70,10 @@ namespace PlayableRPG_MasonSeale
         public override void Update()
         {
             base.Update();
+        }
+        public Position PositionCheck()
+        {
+            return _pos;
         }
 
     }

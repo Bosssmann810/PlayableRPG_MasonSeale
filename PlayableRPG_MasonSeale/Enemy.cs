@@ -8,6 +8,7 @@ namespace PlayableRPG_MasonSeale
 {
     internal class Enemy : Character 
     {
+        Position _oldpos = new Position(0,0);
         Player _target;
         public Enemy(Player target, int x, int y, int max, ConsoleColor enmColor, string enmIcon, int enmDamage) : base(x,y,max,enmColor,enmIcon,enmDamage)
         {
@@ -16,7 +17,29 @@ namespace PlayableRPG_MasonSeale
 
         public override void Move()
         {
+            _oldpos = _pos; 
+            if(_target.GetPlayerX() > _pos.GetPositionX())
+            {
+                _pos.SetposX(_pos.GetPositionX()+1);
+            }
+            if (_target.GetPlayerX() < _pos.GetPositionX())
+            {
+                _pos.SetposX(_pos.GetPositionX() - 1);
+            }
+            if(_target.GetPlayerY() > _pos.GetPositionY())
+            {
+                _pos.SetposY(_pos.GetPositionY() + 1);
+            }
+            if (_target.GetPlayerY() < _pos.GetPositionY())
+            {
+                _pos.SetposY(_pos.GetPositionY() - 1);
+            }
+        }
 
+        public void DenyMovement()
+        {
+            _pos.SetposY(_oldpos.GetPositionY());
+            _pos.SetposX(_oldpos.GetPositionX());
         }
         //returns enemy x position
         public int GetEnemyX()
