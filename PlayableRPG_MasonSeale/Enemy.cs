@@ -17,8 +17,8 @@ namespace PlayableRPG_MasonSeale
 
         public override void Move()
         {
-            _oldpos = _pos; 
-            if(_target.GetPlayerX() > _pos.GetPositionX())
+            _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
+            if (_target.GetPlayerX() > _pos.GetPositionX())
             {
                 _pos.SetposX(_pos.GetPositionX()+1);
             }
@@ -38,8 +38,8 @@ namespace PlayableRPG_MasonSeale
 
         public void DenyMovement()
         {
-            _pos.SetposY(_oldpos.GetPositionY());
             _pos.SetposX(_oldpos.GetPositionX());
+            _pos.SetposY(_oldpos.GetPositionY());
         }
         //returns enemy x position
         public int GetEnemyX()

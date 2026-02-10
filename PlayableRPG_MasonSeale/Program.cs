@@ -24,7 +24,7 @@ namespace PlayableRPG_MasonSeale
                 player.Move();
                 refferee.PlayerAttackDetection(player, enemy);
                 refferee.PlayerBoundCheck(player, map);
-                //enemy.Move();
+                enemy.Move();
                 refferee.EnemyAttackDetection(player, enemy);
                 refferee.EnemyBoundCheck(enemy, map);
                 Console.WriteLine(player.GetPlayerX().ToString());
