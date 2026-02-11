@@ -38,6 +38,10 @@ namespace PlayableRPG_MasonSeale
         {
             return _damage;
         }
+        public virtual string ShowName()
+        {
+            return "You";
+        }
 
 
     }

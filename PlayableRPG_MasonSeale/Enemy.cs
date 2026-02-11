@@ -18,21 +18,29 @@ namespace PlayableRPG_MasonSeale
         public override void Move()
         {
             _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
-            if (_target.GetPlayerX() > _pos.GetPositionX())
+            Random _rng = new Random();
+            int _moveChoice = _rng.Next(0, 2);
+            if (_moveChoice == 0)
             {
-                _pos.SetposX(_pos.GetPositionX()+1);
+                if (_target.GetPlayerX() > _pos.GetPositionX())
+                {
+                    _pos.SetposX(_pos.GetPositionX() + 1);
+                }
+                if (_target.GetPlayerX() < _pos.GetPositionX())
+                {
+                    _pos.SetposX(_pos.GetPositionX() - 1);
+                }
             }
-            if (_target.GetPlayerX() < _pos.GetPositionX())
+            if (_moveChoice == 1)
             {
-                _pos.SetposX(_pos.GetPositionX() - 1);
-            }
-            if(_target.GetPlayerY() > _pos.GetPositionY())
-            {
-                _pos.SetposY(_pos.GetPositionY() + 1);
-            }
-            if (_target.GetPlayerY() < _pos.GetPositionY())
-            {
-                _pos.SetposY(_pos.GetPositionY() - 1);
+                if (_target.GetPlayerY() > _pos.GetPositionY())
+                {
+                    _pos.SetposY(_pos.GetPositionY() + 1);
+                }
+                if (_target.GetPlayerY() < _pos.GetPositionY())
+                {
+                    _pos.SetposY(_pos.GetPositionY() - 1);
+                }
             }
         }
 
@@ -58,6 +66,26 @@ namespace PlayableRPG_MasonSeale
         public override void Update()
         {
             base.Update();
-        } 
+        }
+        public bool AliveChecker()
+        {
+            return _health.AliveCheck();
+        }
+        public int ShowHealth()
+        {
+            return _health.GetCurrentHP();
+        }
+        public void RunDeath()
+        {
+            _icon = "";
+            _oldpos.SetposX(20);
+            _oldpos.SetposY(20);
+            DenyMovement();
+        }
+        public override string ShowName()
+        {
+            return "The Enemy";
+        }
+
     }
 }

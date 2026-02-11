@@ -10,6 +10,7 @@ namespace PlayableRPG_MasonSeale
     internal class Player : Character
     {
         Position _oldPos;
+        bool _foundHat = false;
     
 
         public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
@@ -72,10 +73,44 @@ namespace PlayableRPG_MasonSeale
             Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY());
             Console.ForegroundColor = _color;
             Console.Write(_icon);
+            //this only works if the player has found the hat.
+            if (_foundHat)
+            {
+                Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY() - 1);
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write('*');
+            }
         }
         public Position PositionCheck()
         {
             return _pos;
+        }
+        public int ShowHealth()
+        {
+            return _health.GetCurrentHP();
+        }
+        //this function heals the player to full
+        public void Restore()
+        {
+            _health.ResetHP();
+        }
+        //this method checks to see if the player is still alive. 
+        public bool AliveChecker()
+        {
+            return _health.AliveCheck();
+        }
+        //displays the hat when called
+        public void HatCollected()
+        {
+            _foundHat = true;
+        }
+        public bool HatMessage()
+        {
+            return _foundHat;
+        }
+        public override string ShowName()
+        {
+            return "You";
         }
 
     }

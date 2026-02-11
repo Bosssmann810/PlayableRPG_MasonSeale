@@ -24,11 +24,22 @@ namespace PlayableRPG_MasonSeale
 
         public void ResetHP()
         {
-            _maxHP = _currentHP;
+            _currentHP = _maxHP;
         }
         public int GetCurrentHP()
         {
             return _currentHP;
+        }
+        public bool AliveCheck()
+        {
+            if(_currentHP > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

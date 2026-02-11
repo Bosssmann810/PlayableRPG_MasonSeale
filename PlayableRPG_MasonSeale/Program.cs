@@ -10,28 +10,42 @@ namespace PlayableRPG_MasonSeale
     {
         static void Main(string[] args)
         {
-            
-            Player player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 2, 10);
-            Enemy enemy = new Enemy(player, 5, 5, 10, ConsoleColor.Red, "i", 1);
+            Hud hud = new Hud();
+            Console.CursorVisible = false;
+            Player player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
+            Enemy enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 1);
             Map map = new Map();
-            MovementChecker refferee = new MovementChecker();
+            MovementChecker referee = new MovementChecker();
             map.SetBoundries();
             while (true)
             { 
                 map.Update();
+                hud.HudUpdate(player, enemy);
+                if (player.AliveChecker() == false)
+                {
+                    enemy.Update();
+                    break;
+                }
                 player.Update();
-                enemy.Update();
+                if (enemy.AliveChecker())
+                {
+                    enemy.Update();
+                }
                 player.Move();
-                refferee.PlayerAttackDetection(player, enemy);
-                refferee.PlayerBoundCheck(player, map);
+                referee.PlayerAttackDetection(player, enemy, hud);
+                referee.PlayerBoundCheck(player, map);
+                referee.PlayerHatFound(player, map);
+                referee.PlayerHealCheck(player, map, hud);
                 enemy.Move();
-                refferee.EnemyAttackDetection(player, enemy);
-                refferee.EnemyBoundCheck(enemy, map);
-                Console.WriteLine(player.GetPlayerX().ToString());
+                if(enemy.AliveChecker() == false)
+                {
+                    enemy.RunDeath();
+                }
+                referee.EnemyAttackDetection(player, enemy, hud);
+                referee.EnemyBoundCheck(enemy, map);
                 Console.Clear();
             }
-
+            Console.ReadKey(true);
         }
-
     }
 }
