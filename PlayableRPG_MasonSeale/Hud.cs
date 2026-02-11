@@ -8,25 +8,59 @@ namespace PlayableRPG_MasonSeale
 {
     internal class Hud
     {
-        
+        bool _playerAtkMessage = false;
+        bool _healMessage = false;
+        bool _enemyAtkMessage = false;
+        bool _enemyDeathMessage = false;
         public void HudUpdate(Player player, Enemy enemy)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"HP: {player.ShowHealth()}");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Enemy HP: {enemy.ShowHealth()}");
+            if(_playerAtkMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"{player.ShowName()} attacked {enemy.ShowName()} for {player.GetDamage()} damage!");
+                _playerAtkMessage = false;
+            }
+            if(_healMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"{player.ShowName()} healed to full!");
+                _healMessage = false;
+            }
+            if(_enemyAtkMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"{enemy.ShowName()} attacked {player.ShowName()} for {enemy.GetDamage()} damage!");
+                _enemyAtkMessage = false;
+            }
+            if(_enemyDeathMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine($"{enemy.ShowName()} died");
+                _enemyDeathMessage = false;
+            }
         }
         
 
-        public void AttackMessage(Character attacker, Character target)
+        public void PlayerAttackMessage()
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"{attacker.ShowName()} attacked {target.ShowName()} for {attacker.GetDamage()} damage!");
+            _playerAtkMessage = true;
+
         }
-        public void HealMessage(Character target)
+        public void HealMessage()
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"{target.ShowName()} healed to full!");
+            _healMessage = true;
+        }
+        public void EnemyAttackMessage()
+        {
+            _enemyAtkMessage = true;
+        }
+        public void EnemyDeathMessage()
+        {
+            _enemyDeathMessage = true;
         }
     }
 }

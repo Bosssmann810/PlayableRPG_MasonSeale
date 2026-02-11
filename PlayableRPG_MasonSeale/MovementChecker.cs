@@ -23,7 +23,7 @@ namespace PlayableRPG_MasonSeale
                 //and damage the enemy
                 enemy.Pain(player.GetDamage());
                 //tell hud to display a message
-                hud.AttackMessage(player, enemy);
+                hud.PlayerAttackMessage();
             }
             //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
         }
@@ -38,7 +38,7 @@ namespace PlayableRPG_MasonSeale
                 //and damage the enemy
                 player.Pain(enemy.GetDamage());
                 //tell hud to display a message
-                hud.AttackMessage(enemy, player);
+                hud.EnemyAttackMessage();
             }
             //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
         }
@@ -61,7 +61,7 @@ namespace PlayableRPG_MasonSeale
             if (map.GetHealthSpots().Contains((player.GetPlayerX(), player.GetPlayerY())))
             {
                 player.Restore();
-                hud.HealMessage(player);
+                hud.HealMessage();
             }
         }
         public void PlayerHatFound(Player player, Map map)
