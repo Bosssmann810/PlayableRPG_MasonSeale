@@ -7,3 +7,12 @@ C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableR
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe.config
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\map.txt
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\map.txt
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe.config
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe.config
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb

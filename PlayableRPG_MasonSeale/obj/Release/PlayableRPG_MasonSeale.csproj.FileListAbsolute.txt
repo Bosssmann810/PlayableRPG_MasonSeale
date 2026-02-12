@@ -1,0 +1,8 @@
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\map.txt
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe.config
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb
