@@ -43,12 +43,13 @@ namespace PlayableRPG_MasonSeale
                 hud.HealMessage();
             }
         }
-        public void PlayerHatFound(Player player, Map map)
+        public void PlayerHatFound(Player player, Map map, Hud hud)
         {
             if (map.FindHat() == (player.GetXPos(), player.GetYPos()))
             {
                 player.HatCollected();
                 map.CollectHat();
+                hud.HatMessage(map);
             }
         }
         public void PlayerSwordFound(Player player, Map map)

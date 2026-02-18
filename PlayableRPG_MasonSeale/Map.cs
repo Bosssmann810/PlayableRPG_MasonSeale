@@ -44,6 +44,10 @@ namespace PlayableRPG_MasonSeale
                     {
                         _swordLocation = (j, i);
                     }
+                    if (map[i][j] == ':')
+                    {
+                        _endingLine = new Position(j, i);
+                    }
                 }
             }
         }
@@ -98,6 +102,10 @@ namespace PlayableRPG_MasonSeale
                             continue;
                         }
                     }
+                    if (map[i][j] == ':')
+                    {
+                        continue;
+                    }
                     Console.Write(map[i][j]);
                 }
                 Console.WriteLine();
@@ -132,6 +140,11 @@ namespace PlayableRPG_MasonSeale
         public void CollectSword()
         {
             _swordCollected = true;
+        }
+        //returns the position of the bottom most line
+        public Position FindEndingLine()
+        {
+            return _endingLine;
         }
 
     }

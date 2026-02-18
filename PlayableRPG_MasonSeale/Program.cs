@@ -25,7 +25,11 @@ namespace PlayableRPG_MasonSeale
                 hud.HudUpdate(player, enemy);
                 if (player.AliveChecker() == false)
                 {
+                    Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine("You Died");
                     enemy.Update();
+                    speedyEnemy.Update();
                     break;
                 }
                 player.Update();
@@ -42,7 +46,7 @@ namespace PlayableRPG_MasonSeale
                 referee.AttackDetection(player, enemy, hud);
                 referee.AttackDetection(player, speedyEnemy, hud);
                 referee.BoundCheck(player, map);
-                referee.PlayerHatFound(player, map);
+                referee.PlayerHatFound(player, map, hud);
                 referee.PlayerSwordFound(player, map);
                 referee.PlayerHealCheck(player, map, hud);
                 
@@ -50,7 +54,7 @@ namespace PlayableRPG_MasonSeale
                 enemy.Move();
                 if(enemy.AliveChecker() == false)
                 {
-                    enemy.RunDeath();
+                    enemy.RunDeath(map);
                 }
                 referee.AttackDetection(enemy, player, hud);
                 referee.BoundCheck(enemy, map);
@@ -60,7 +64,7 @@ namespace PlayableRPG_MasonSeale
                 speedyEnemy.Move();
                 if(speedyEnemy.AliveChecker() == false)
                 {
-                    speedyEnemy.RunDeath();
+                    speedyEnemy.RunDeath(map);
                 }
                 referee.AttackDetection(speedyEnemy, player, hud);
                 referee.BoundCheck(speedyEnemy, map);

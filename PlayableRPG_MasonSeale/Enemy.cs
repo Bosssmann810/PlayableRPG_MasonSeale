@@ -63,11 +63,11 @@ namespace PlayableRPG_MasonSeale
         {
             return _health.GetCurrentHP();
         }
-        public void RunDeath()
+        public void RunDeath(Map map)
         {
             _icon = "";
-            _oldpos.SetposX(20);
-            _oldpos.SetposY(20);
+            _oldpos.SetposX(map.FindEndingLine().GetPositionX());
+            _oldpos.SetposY(map.FindEndingLine().GetPositionY());
             DenyMovement();
         }
         public override string ShowName()

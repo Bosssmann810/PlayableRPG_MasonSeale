@@ -62,5 +62,12 @@ namespace PlayableRPG_MasonSeale
         {
             _enemyDeathMessage = true;
         }
+
+        public void HatMessage(Map pos)
+        {
+            Console.SetCursorPosition(pos.FindEndingLine().GetPositionX(), pos.FindEndingLine().GetPositionY());
+            Console.WriteLine();
+            Console.WriteLine("You found a hat");
+        }
     }
 }
