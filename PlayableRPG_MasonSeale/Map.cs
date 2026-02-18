@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,10 @@ namespace PlayableRPG_MasonSeale
         List<(int,int)> _noGoZone = new List<(int, int)>();
         List<(int, int)> _healSpots = new List<(int, int)>();
         (int, int) _hatLocation;
-        bool _collected = false;
+        (int, int) _swordLocation;
+        bool _hatCollected = false;
+        bool _swordCollected = false;
+        Position _endingLine = new Position(1,1);
         
         //sets all parts that need to be interacted with, borders, the hat location and heal spots.
         public void SetBoundries()
@@ -35,6 +39,10 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == '*')
                     {
                         _hatLocation = (j, i);
+                    }
+                    if (map[i][j] == '!')
+                    {
+                        _swordLocation = (j, i);
                     }
                 }
             }
@@ -73,16 +81,28 @@ namespace PlayableRPG_MasonSeale
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         //if the hat is collected just draw a normal grass tile instead.
-                        if (_collected == true)
+                        if (_hatCollected == true)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
                             Console.Write('`');
                             continue;
                         }
                     }
+                    if (map[i][j] == '!')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        if(_swordCollected == true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("~");
+                            continue;
+                        }
+                    }
                     Console.Write(map[i][j]);
                 }
                 Console.WriteLine();
+
+               
             }
         }
         //returns the list of no go places for later use
@@ -101,9 +121,17 @@ namespace PlayableRPG_MasonSeale
         {
             return _hatLocation;
         }
+        public (int, int) FindSword()
+        {
+            return _swordLocation;
+        }
         public void CollectHat()
         {
-            _collected = true;
+            _hatCollected = true;
+        }
+        public void CollectSword()
+        {
+            _swordCollected = true;
         }
 
     }

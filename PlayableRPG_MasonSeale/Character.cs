@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,6 +28,7 @@ namespace PlayableRPG_MasonSeale
             _color = color;
             _icon = icon;
         }
+        //displays the character at the current position.
         public virtual void Update()
         {
             Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY());
@@ -42,7 +44,31 @@ namespace PlayableRPG_MasonSeale
         {
             return "You";
         }
+        //placeholder function
+        public virtual void DenyMovement()
+        {
+            
+        }
+        //returns x pos
+        public int GetYPos()
+        {
+            return _pos.GetPositionY();
+        }
+        //returns y pos
+        public int GetXPos()
+        {
+            return _pos.GetPositionX();
+        }
+        //deals damage
+        public void Pain(int painAmount)
+        {
+            _health.TakeDamage(painAmount);
+        }
 
+        public void ChangeDamage(int newDamage)
+        {
+            _damage = newDamage;
+        }
 
     }
 }

@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace PlayableRPG_MasonSeale
 {
-    internal class Enemy : Character 
+    internal class FastEnemy : Character
     {
-        Position _oldpos = new Position(0,0);
+        Position _oldpos = new Position(0, 0);
         Player _target;
-        public Enemy(Player target, int x, int y, int max, ConsoleColor enmColor, string enmIcon, int enmDamage) : base(x,y,max,enmColor,enmIcon,enmDamage)
+        public FastEnemy(Player target, int x, int y, int max, ConsoleColor enmColor, string enmIcon, int enmDamage) : base(x, y, max, enmColor, enmIcon, enmDamage)
         {
             _target = target;
         }
-
+        
+        //this enemy will never fail a movement and will always head towards the player moving diagonally if its faster.
         public override void Move()
         {
             _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
-            Random _rng = new Random();
-            int _moveChoice = _rng.Next(0, 2);
-            if (_moveChoice == 0)
-            {
+            
+            
                 if (_target.GetXPos() > _pos.GetPositionX())
                 {
                     _pos.SetposX(_pos.GetPositionX() + 1);
@@ -30,9 +29,9 @@ namespace PlayableRPG_MasonSeale
                 {
                     _pos.SetposX(_pos.GetPositionX() - 1);
                 }
-            }
-            if (_moveChoice == 1)
-            {
+            
+            
+            
                 if (_target.GetYPos() > _pos.GetPositionY())
                 {
                     _pos.SetposY(_pos.GetPositionY() + 1);
@@ -40,7 +39,7 @@ namespace PlayableRPG_MasonSeale
                 if (_target.GetYPos() < _pos.GetPositionY())
                 {
                     _pos.SetposY(_pos.GetPositionY() - 1);
-                }
+                
             }
         }
 
@@ -49,7 +48,16 @@ namespace PlayableRPG_MasonSeale
             _pos.SetposX(_oldpos.GetPositionX());
             _pos.SetposY(_oldpos.GetPositionY());
         }
-
+        //returns enemy x position
+        public int GetEnemyX()
+        {
+            return _pos.GetPositionX();
+        }
+        //returns enemy y position
+        public int GetEnemyY()
+        {
+            return _pos.GetPositionY();
+        }
 
         public override void Update()
         {
@@ -72,7 +80,7 @@ namespace PlayableRPG_MasonSeale
         }
         public override string ShowName()
         {
-            return "The Enemy";
+            return "The Fast Enemy";
         }
 
     }

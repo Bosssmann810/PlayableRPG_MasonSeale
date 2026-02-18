@@ -11,7 +11,8 @@ namespace PlayableRPG_MasonSeale
     {
         Position _oldPos;
         bool _foundHat = false;
-    
+        int _facingDirection;
+        bool _foundSword = false;
 
         public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
         {
@@ -38,34 +39,25 @@ namespace PlayableRPG_MasonSeale
             if(_playerInput.Key == ConsoleKey.A)
             {
                 _pos.SetposX(_pos.GetPositionX() - 1);
+                _facingDirection = -1;
             }
             if(_playerInput.Key == ConsoleKey.D)
             {
                 _pos.SetposX(_pos.GetPositionX() + 1);
+                _facingDirection = 1;
             }
             //attack overlap is handled by MovementChecker
         }
         //returns the players x position
-        public int GetPlayerX()
-        {
-            return _pos.GetPositionX();
-        }
+
 
         //returns the players Y position
-        public int GetPlayerY()
-        {
-            return _pos.GetPositionY();
-        }
+
         //this is called when I want to prevent the player from going somewhere, it resets the players position back to _oldPos, which was declaired in movement;
-        public void DenyMovement()
+        public override void DenyMovement()
         {
             _pos.SetposX(_oldPos.GetPositionX());
             _pos.SetposY(_oldPos.GetPositionY());
-        }
-        //this is called when the player needs to take damage
-        public void Pain(int painAmount)
-        {
-            _health.TakeDamage(painAmount);
         }
         //this function will be in anything that needs to be updated, and they will all be placed into the update method in the main program.
         public override void Update()
@@ -79,6 +71,12 @@ namespace PlayableRPG_MasonSeale
                 Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY() - 1);
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.Write('*');
+            }
+            if (_foundSword)
+            {
+                Console.SetCursorPosition(_pos.GetPositionX() + _facingDirection, _pos.GetPositionY());
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("!");
             }
         }
         public Position PositionCheck()
@@ -104,9 +102,17 @@ namespace PlayableRPG_MasonSeale
         {
             _foundHat = true;
         }
+        public void SwordCollected()
+        {
+            _foundSword = true;
+        }
         public bool HatMessage()
         {
             return _foundHat;
+        }
+        public bool SwordMessage()
+        {
+            return _foundSword;
         }
         public override string ShowName()
         {

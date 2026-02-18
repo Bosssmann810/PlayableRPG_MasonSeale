@@ -12,53 +12,32 @@ namespace PlayableRPG_MasonSeale
     internal class MovementChecker
     {
 
-        //this is called after every time the player moves to detect any attacks made
-        public void PlayerAttackDetection(Player player, Enemy enemy, Hud hud)
+        //this is called after every time something moves to detect any attacks made
+        public void AttackDetection(Character attacker, Character victim, Hud hud)
         {
-            //if the player overlaps with an enemy
-            if (player.GetPlayerY() == enemy.GetEnemyY() && player.GetPlayerX() == enemy.GetEnemyX())
+            //if the attacker overlaps with an victim
+            if (attacker.GetYPos() == victim.GetYPos() && attacker.GetXPos() == victim.GetXPos())
             {
-                //don't allow player to move
-                player.DenyMovement();
-                //and damage the enemy
-                enemy.Pain(player.GetDamage());
+                //don't allow attacker to move
+                attacker.DenyMovement();
+                //and damage the victim
+                victim.Pain(attacker.GetDamage());
                 //tell hud to display a message
                 hud.PlayerAttackMessage();
             }
             //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
         }
-        //this is called after the enemy moves
-        public void EnemyAttackDetection(Player player, Enemy enemy, Hud hud)
+
+        public void BoundCheck(Character entity, Map map)
         {
-            //if the player overlaps with an enemy
-            if (player.GetPlayerY() == enemy.GetEnemyY() && player.GetPlayerX() == enemy.GetEnemyX())
+            if(map.GetListNoGo().Contains((entity.GetXPos(), entity.GetYPos())))
             {
-                //don't allow player to move
-                enemy.DenyMovement();
-                //and damage the enemy
-                player.Pain(enemy.GetDamage());
-                //tell hud to display a message
-                hud.EnemyAttackMessage();
-            }
-            //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
-        }
-        public void PlayerBoundCheck(Player player, Map map)
-        {
-            if(map.GetListNoGo().Contains((player.GetPlayerX(), player.GetPlayerY())))
-            {
-                player.DenyMovement();
-            }
-        }
-        public void EnemyBoundCheck(Enemy enemy, Map map)
-        {
-            if(map.GetListNoGo().Contains((enemy.GetEnemyX(), enemy.GetEnemyY())))
-            {
-                enemy.DenyMovement();
+                entity.DenyMovement();
             }
         }
         public void PlayerHealCheck(Player player, Map map, Hud hud)
         {
-            if (map.GetHealthSpots().Contains((player.GetPlayerX(), player.GetPlayerY())))
+            if (map.GetHealthSpots().Contains((player.GetXPos(), player.GetYPos())))
             {
                 player.Restore();
                 hud.HealMessage();
@@ -66,11 +45,28 @@ namespace PlayableRPG_MasonSeale
         }
         public void PlayerHatFound(Player player, Map map)
         {
-            if (map.FindHat() == (player.GetPlayerX(), player.GetPlayerY()))
+            if (map.FindHat() == (player.GetXPos(), player.GetYPos()))
             {
                 player.HatCollected();
                 map.CollectHat();
             }
+        }
+        public void PlayerSwordFound(Player player, Map map)
+        {
+            if (map.FindSword() == (player.GetXPos(), player.GetYPos()))
+            {
+                player.SwordCollected();
+                map.CollectSword();
+                player.ChangeDamage(2);
+            }
+        }
+        public void EnemyBumping(Character enemyA, Character enemyB)
+        {
+            if(enemyA.GetXPos() == enemyB.GetXPos() && enemyA.GetYPos() == enemyB.GetYPos())
+            {
+                enemyA.DenyMovement();
+            }
+
         }
     }
 }
