@@ -8,14 +8,17 @@ namespace PlayableRPG_MasonSeale
 {
     internal class Hud
     {
-        bool _playerAtkMessage = false;
+        bool _AtkMessage = false;
         bool _healMessage = false;
-        bool _enemyAtkMessage = false;
+
         bool _enemyDeathMessage = false;
         bool _enemyAttack = false;
         bool _hatfound = false;
         bool _swordFound = false;
-        Character _currentEnemy = new Character(0,0,1,ConsoleColor.Black,"i",1);
+        bool _armorFound = false;
+        Character _attacker = new Character(0,0,1,ConsoleColor.Black,"i",1);
+        Character _victim = new Character(0, 0, 1, ConsoleColor.Black, "i", 1);
+        List<(Character a, Character v)> _attackEvents = new List<(Character, Character)>();
         public void HudUpdate(Player player)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -23,18 +26,17 @@ namespace PlayableRPG_MasonSeale
             if (_enemyAttack == true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Enemy HP: {_currentEnemy.CurrentHP()}");
+                Console.WriteLine($"Enemy HP: {_attacker.CurrentHP()}");
             }
-            if(_playerAtkMessage == true)
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"{player.ShowName()} attacked {_currentEnemy.ShowName()} for {player.GetDamage()} damage!");
-                _playerAtkMessage = false;
-            }
+
             if(_hatfound == true)
             {
                 Console.WriteLine("You found a hat");
                 _hatfound = false;
+            }
+            if(_armorFound == true)
+            {
+                Console.WriteLine("You found some armor");
             }
             if (_swordFound == true)
             {
@@ -47,35 +49,39 @@ namespace PlayableRPG_MasonSeale
                 Console.WriteLine($"{player.ShowName()} healed to full!");
                 _healMessage = false;
             }
-            if(_enemyAtkMessage == true)
+            if(_AtkMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{_currentEnemy.ShowName()} attacked {player.ShowName()} for {_currentEnemy.GetDamage()} damage!");
-                _enemyAtkMessage = false;
+                foreach((Character a, Character v) _events in _attackEvents)
+                {
+                    _attacker = _events.a;
+                    _victim = _events.v;
+                    Console.WriteLine($"{_attacker.ShowName()} attacked {_victim.ShowName()} for {_victim.GetDamage()} damage!");
+                   
+                }
+                _attackEvents.Clear();
+                _AtkMessage = false;
             }
             if(_enemyDeathMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine($"{_currentEnemy.ShowName()} died");
+                Console.WriteLine($"{_victim.ShowName()} died");
                 _enemyDeathMessage = false;
             }
         }
         
 
-        public void PlayerAttackMessage()
+        public void AttackMessage(Character attacker, Character victim)
         {
-            _playerAtkMessage = true;
-
+            _attackEvents.Add((attacker, victim));
+            _AtkMessage = true;
         }
         
         public void HealMessage()
         {
             _healMessage = true;
         }
-        public void EnemyAttackMessage()
-        {
-            _enemyAtkMessage = true;
-        }
+
         public void EnemyDeathMessage()
         {
             _enemyDeathMessage = true;
@@ -85,9 +91,17 @@ namespace PlayableRPG_MasonSeale
         {
             _hatfound = true;
         }
-        public void CurrentEnemyUpdate(Character newchar)
+        public void ArmorMessage()
         {
-            _currentEnemy = newchar; 
+            _armorFound = true;
+        }
+        public void CurrentVictimUpdate(Character newchar)
+        {
+            _victim = newchar; 
+        }
+        public void CurrentAttackerUpdate(Character newchar)
+        {
+            _attacker = newchar;
         }
         public void SwordMessage()
         {

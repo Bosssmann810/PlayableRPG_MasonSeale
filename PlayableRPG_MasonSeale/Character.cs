@@ -15,6 +15,7 @@ namespace PlayableRPG_MasonSeale
         protected ConsoleColor _color;
         protected string _icon;
         protected int _damage;
+        protected int _defense = 0;
         
         public virtual void Move()
         {
@@ -62,7 +63,11 @@ namespace PlayableRPG_MasonSeale
         //deals damage
         public void Pain(int painAmount)
         {
-            _health.TakeDamage(painAmount);
+            if(painAmount - _defense <= 0)
+            {
+                return;
+            }
+            _health.TakeDamage((painAmount - _defense));
         }
 
         public void ChangeDamage(int newDamage)
@@ -74,6 +79,14 @@ namespace PlayableRPG_MasonSeale
         {
             return _health.GetCurrentHP();
 
+        }
+        public void ChangeColor(ConsoleColor newcolor)
+        {
+            _color = newcolor;
+        }
+        public void ChangeDefense(int newDefense)
+        {
+            _defense = newDefense;
         }
 
     }

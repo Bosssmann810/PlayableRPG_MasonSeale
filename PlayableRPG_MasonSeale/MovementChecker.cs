@@ -11,6 +11,7 @@ namespace PlayableRPG_MasonSeale
     //the referee
     internal class MovementChecker
     {
+        bool _armorfound = false;
         bool _hatfound = false;
         bool _swordFound = false;
         //this is called after every time something moves to detect any attacks made
@@ -24,7 +25,7 @@ namespace PlayableRPG_MasonSeale
                 //and damage the victim
                 victim.Pain(attacker.GetDamage());
                 //tell hud to display a message
-                hud.PlayerAttackMessage();
+                hud.AttackMessage(attacker, victim);
             }
             //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
         }
@@ -57,6 +58,23 @@ namespace PlayableRPG_MasonSeale
                 map.CollectHat();
                 hud.HatMessage();
                 _hatfound = true;
+            }
+        }
+
+        public void PlayerArmorFound(Player player, Map map, Hud hud)
+        {
+            if (map.FindArmor() == (player.GetXPos(), player.GetYPos()))
+            {
+                if (_armorfound == true)
+                {
+                    return;
+                }
+                player.DenyMovement();
+                player.ChangeColor(ConsoleColor.Cyan);
+                player.ChangeDefense(1);
+                map.CollectArmor();
+                hud.HatMessage();
+                _armorfound = true;
             }
         }
         public void PlayerSwordFound(Player player, Map map, Hud hud)

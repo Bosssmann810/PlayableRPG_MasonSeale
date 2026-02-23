@@ -14,8 +14,10 @@ namespace PlayableRPG_MasonSeale
         List<(int, int)> _healSpots = new List<(int, int)>();
         (int, int) _hatLocation;
         (int, int) _swordLocation;
+        (int, int) _armorLocation;
         bool _hatCollected = false;
         bool _swordCollected = false;
+        bool _armorCollected = false;
         Position _endingLine = new Position(1,1);
         
         //sets all parts that need to be interacted with, borders, the hat location and heal spots.
@@ -47,6 +49,10 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == ':')
                     {
                         _endingLine = new Position(j, i);
+                    }
+                    if (map[i][j] == '@')
+                    {
+                        _armorLocation = (j, i);
                     }
                 }
             }
@@ -81,6 +87,10 @@ namespace PlayableRPG_MasonSeale
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                     }
+                    if (map[i][j] == '#')
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    }
                     if (map[i][j] == '*')
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -99,6 +109,16 @@ namespace PlayableRPG_MasonSeale
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.Write("~");
+                            continue;
+                        }
+                    }
+                    if (map[i][j] == '@')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        if (_armorCollected == true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.Write("`");
                             continue;
                         }
                     }
@@ -133,6 +153,10 @@ namespace PlayableRPG_MasonSeale
         {
             return _swordLocation;
         }
+        public (int,int) FindArmor()
+        {
+            return _armorLocation;
+        }
         public void CollectHat()
         {
             _hatCollected = true;
@@ -140,6 +164,11 @@ namespace PlayableRPG_MasonSeale
         public void CollectSword()
         {
             _swordCollected = true;
+        }
+
+        public void CollectArmor()
+        {
+            _armorCollected = true;
         }
         //returns the position of the bottom most line
         public Position FindEndingLine()

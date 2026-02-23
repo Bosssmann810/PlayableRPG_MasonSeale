@@ -10,6 +10,7 @@ namespace PlayableRPG_MasonSeale
     {
         Position _oldpos = new Position(0, 0);
         Player _target;
+
         public FastEnemy(Player target, int x, int y, int max, ConsoleColor enmColor, string enmIcon, int enmDamage) : base(x, y, max, enmColor, enmIcon, enmDamage)
         {
             _target = target;
