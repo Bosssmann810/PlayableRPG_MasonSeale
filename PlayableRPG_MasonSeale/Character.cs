@@ -70,5 +70,11 @@ namespace PlayableRPG_MasonSeale
             _damage = newDamage;
         }
 
+        public int CurrentHP()
+        {
+            return _health.GetCurrentHP();
+
+        }
+
     }
 }

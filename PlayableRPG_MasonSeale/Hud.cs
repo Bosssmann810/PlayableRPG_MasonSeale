@@ -12,19 +12,36 @@ namespace PlayableRPG_MasonSeale
         bool _healMessage = false;
         bool _enemyAtkMessage = false;
         bool _enemyDeathMessage = false;
-        public void HudUpdate(Player player, Enemy enemy)
+        bool _enemyAttack = false;
+        bool _hatfound = false;
+        bool _swordFound = false;
+        Character _currentEnemy = new Character(0,0,1,ConsoleColor.Black,"i",1);
+        public void HudUpdate(Player player)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"HP: {player.ShowHealth()}");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Enemy HP: {enemy.ShowHealth()}");
+            if (_enemyAttack == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Enemy HP: {_currentEnemy.CurrentHP()}");
+            }
             if(_playerAtkMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"{player.ShowName()} attacked {enemy.ShowName()} for {player.GetDamage()} damage!");
+                Console.WriteLine($"{player.ShowName()} attacked {_currentEnemy.ShowName()} for {player.GetDamage()} damage!");
                 _playerAtkMessage = false;
             }
-            if(_healMessage == true)
+            if(_hatfound == true)
+            {
+                Console.WriteLine("You found a hat");
+                _hatfound = false;
+            }
+            if (_swordFound == true)
+            {
+                Console.WriteLine("You found a Sword");
+                _swordFound = false;
+            }
+            if (_healMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"{player.ShowName()} healed to full!");
@@ -33,13 +50,13 @@ namespace PlayableRPG_MasonSeale
             if(_enemyAtkMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{enemy.ShowName()} attacked {player.ShowName()} for {enemy.GetDamage()} damage!");
+                Console.WriteLine($"{_currentEnemy.ShowName()} attacked {player.ShowName()} for {_currentEnemy.GetDamage()} damage!");
                 _enemyAtkMessage = false;
             }
             if(_enemyDeathMessage == true)
             {
                 Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine($"{enemy.ShowName()} died");
+                Console.WriteLine($"{_currentEnemy.ShowName()} died");
                 _enemyDeathMessage = false;
             }
         }
@@ -50,6 +67,7 @@ namespace PlayableRPG_MasonSeale
             _playerAtkMessage = true;
 
         }
+        
         public void HealMessage()
         {
             _healMessage = true;
@@ -63,11 +81,17 @@ namespace PlayableRPG_MasonSeale
             _enemyDeathMessage = true;
         }
 
-        public void HatMessage(Map pos)
+        public void HatMessage()
         {
-            Console.SetCursorPosition(pos.FindEndingLine().GetPositionX(), pos.FindEndingLine().GetPositionY());
-            Console.WriteLine();
-            Console.WriteLine("You found a hat");
+            _hatfound = true;
+        }
+        public void CurrentEnemyUpdate(Character newchar)
+        {
+            _currentEnemy = newchar; 
+        }
+        public void SwordMessage()
+        {
+            _swordFound = true;
         }
     }
 }

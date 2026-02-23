@@ -22,7 +22,7 @@ namespace PlayableRPG_MasonSeale
             { 
                 //update map
                 map.Update();
-                hud.HudUpdate(player, enemy);
+                hud.HudUpdate(player);
                 if (player.AliveChecker() == false)
                 {
                     Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
@@ -47,7 +47,7 @@ namespace PlayableRPG_MasonSeale
                 referee.AttackDetection(player, speedyEnemy, hud);
                 referee.BoundCheck(player, map);
                 referee.PlayerHatFound(player, map, hud);
-                referee.PlayerSwordFound(player, map);
+                referee.PlayerSwordFound(player, map, hud);
                 referee.PlayerHealCheck(player, map, hud);
                 
                 //first enemy moves
