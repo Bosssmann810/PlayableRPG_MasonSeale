@@ -75,8 +75,7 @@ namespace PlayableRPG_MasonSeale
         public void RunDeath(Map map)
         {
             _icon = "";
-            _oldpos.SetposX(map.FindEndingLine().GetPositionX());
-            _oldpos.SetposY(map.FindEndingLine().GetPositionY());
+
             DenyMovement();
         }
         public override string ShowName()

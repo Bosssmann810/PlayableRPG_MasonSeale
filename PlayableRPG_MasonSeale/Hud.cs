@@ -56,7 +56,7 @@ namespace PlayableRPG_MasonSeale
                 {
                     _attacker = _events.a;
                     _victim = _events.v;
-                    Console.WriteLine($"{_attacker.ShowName()} attacked {_victim.ShowName()} for {_attacker.GetDamage()} damage!");
+                    Console.WriteLine($"{_attacker.ShowName()} attacked {_victim.ShowName()} for {_victim.GetDamage()} damage!");
                    
                 }
                 _attackEvents.Clear();

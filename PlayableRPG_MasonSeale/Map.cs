@@ -30,7 +30,7 @@ namespace PlayableRPG_MasonSeale
             {
                 for(int j = 0; j < map[i].Length; j++)
                 {
-                    if (map[i][j] == '│' || map[i][j] == '─' || map[i][j] == '┐' || map[i][j] == '┌' || map[i][j] == '┘' || map[i][j] == '└' || map[i][j] == '^')
+                    if (map[i][j] == '│' ||  map[i][j] == '┐' || map[i][j] == '┌' || map[i][j] == '┘' || map[i][j] == '└' || map[i][j] == '^')
                     {
                         _noGoZone.Add((j,i));
                     }
