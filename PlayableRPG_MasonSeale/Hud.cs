@@ -10,7 +10,7 @@ namespace PlayableRPG_MasonSeale
     {
         bool _AtkMessage = false;
         bool _healMessage = false;
-
+        bool _winMessage = false;
         bool _enemyDeathMessage = false;
         bool _enemyAttack = false;
         bool _hatfound = false;
@@ -70,6 +70,13 @@ namespace PlayableRPG_MasonSeale
                 Console.WriteLine($"{_victim.ShowName()} died");
                 _enemyDeathMessage = false;
             }
+            if(_winMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("You Win");
+                _winMessage = false;
+            }
+
         }
         
 
@@ -114,6 +121,11 @@ namespace PlayableRPG_MasonSeale
         {
             _currentEnemy = newEnemy;
             _enemyAttack = true;
+        }
+
+        public void WinMessage()
+        {
+            _winMessage = true;
         }
     }
 }

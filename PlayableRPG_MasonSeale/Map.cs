@@ -12,6 +12,7 @@ namespace PlayableRPG_MasonSeale
     {
         List<(int,int)> _noGoZone = new List<(int, int)>();
         List<(int, int)> _healSpots = new List<(int, int)>();
+        List<(int, int)> _goldSpots = new List<(int, int)>();
         (int, int) _hatLocation;
         (int, int) _swordLocation;
         (int, int) _armorLocation;
@@ -53,6 +54,10 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == '@')
                     {
                         _armorLocation = (j, i);
+                    }
+                    if (map[i][j] == '-')
+                    {
+                        _goldSpots.Add((j, i));
                     }
                 }
             }
@@ -148,6 +153,11 @@ namespace PlayableRPG_MasonSeale
         public List<(int,int)> GetHealthSpots()
         {
             return _healSpots;
+        }
+
+        public List<(int,int)> GetGoldSpots()
+        {
+            return _goldSpots;
         }
         public (int,int) FindHat()
         {

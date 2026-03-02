@@ -54,6 +54,16 @@ namespace PlayableRPG_MasonSeale
                 hud.HealMessage();
             }
         }
+
+        public bool PlayerGoldCheck(Player player, Map map, Hud hud)
+        {
+            if (map.GetGoldSpots().Contains((player.GetXPos(), player.GetYPos())))
+            {
+                hud.WinMessage();
+                return true;
+            }
+            return false;
+        }
         public void PlayerHatFound(Player player, Map map, Hud hud)
         {
             if (map.FindHat() == (player.GetXPos(), player.GetYPos()))

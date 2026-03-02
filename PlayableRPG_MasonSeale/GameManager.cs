@@ -76,6 +76,13 @@ namespace PlayableRPG_MasonSeale
                 referee.PlayerSwordFound(player, map, hud);
                 referee.PlayerArmorFound(player, map, hud);
                 referee.PlayerHealCheck(player, map, hud);
+                referee.PlayerGoldCheck(player, map, hud);
+                if(referee.PlayerGoldCheck(player,map,hud) == true)
+                {
+                    Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
+                    hud.HudUpdate(player);
+                    break;
+                }
 
                 //first enemy moves
                 enemy.Move();
