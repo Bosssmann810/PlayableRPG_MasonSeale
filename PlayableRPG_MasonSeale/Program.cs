@@ -11,7 +11,7 @@ namespace PlayableRPG_MasonSeale
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            GameManager _gameManager = new GameManager();
+            GameManager _gameManager = GameManager.Instance;
             _gameManager.Start();
             _gameManager.Update();
         }

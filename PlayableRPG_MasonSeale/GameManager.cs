@@ -20,6 +20,10 @@ namespace PlayableRPG_MasonSeale
                 return _instance;
             } 
         }
+        protected GameManager()
+        {
+
+        }
         Hud hud;
         Player player;
         Enemy enemy;
