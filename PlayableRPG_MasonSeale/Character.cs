@@ -80,6 +80,10 @@ namespace PlayableRPG_MasonSeale
             return _health.GetCurrentHP();
 
         }
+        public void SetHealthToZero()
+        {
+            _health.SetToZero();
+        }
         public void ChangeColor(ConsoleColor newcolor)
         {
             _color = newcolor;

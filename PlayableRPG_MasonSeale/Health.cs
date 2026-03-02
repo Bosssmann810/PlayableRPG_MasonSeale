@@ -22,6 +22,10 @@ namespace PlayableRPG_MasonSeale
             _currentHP -= damage; 
         }
 
+        public void SetToZero()
+        {
+            _currentHP = 0;
+        }
         public void ResetHP()
         {
             _currentHP = _maxHP;

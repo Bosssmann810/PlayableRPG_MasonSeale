@@ -79,6 +79,10 @@ namespace PlayableRPG_MasonSeale
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                     }
+                    if (map[i][j] == '-')
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    }
                     if (map[i][j] == '~')
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
@@ -89,7 +93,7 @@ namespace PlayableRPG_MasonSeale
                     }
                     if (map[i][j] == '#')
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                     }
                     if (map[i][j] == '*')
                     {
