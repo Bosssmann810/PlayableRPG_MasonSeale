@@ -54,8 +54,11 @@ namespace PlayableRPG_MasonSeale
                 }
                 //player moves
                 player.Move();
+                referee.EnemyAttackMessageDetection(enemy, player, hud);
                 referee.AttackDetection(player, enemy, hud);
+                referee.EnemyAttackMessageDetection(speedyEnemy, player, hud);
                 referee.AttackDetection(player, speedyEnemy, hud);
+                
                 referee.BoundCheck(player, map);
                 referee.PlayerHatFound(player, map, hud);
                 referee.PlayerSwordFound(player, map, hud);

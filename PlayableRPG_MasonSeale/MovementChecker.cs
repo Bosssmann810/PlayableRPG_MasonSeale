@@ -30,6 +30,15 @@ namespace PlayableRPG_MasonSeale
             //otherwise it dose nothing (it comes in, checks to see if everyone is fallowing the rules and says "carry on"
         }
 
+        public void EnemyAttackMessageDetection(Character enemy, Player player, Hud hud)
+        {
+            if(enemy.GetYPos() == player.GetYPos() && enemy.GetXPos() == player.GetXPos())
+            {
+                hud.ChangeCurrentEnemyDisplayed(enemy);
+            }
+
+        }
+
         public void BoundCheck(Character entity, Map map)
         {
             if(map.GetListNoGo().Contains((entity.GetXPos(), entity.GetYPos())))

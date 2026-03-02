@@ -19,6 +19,7 @@ namespace PlayableRPG_MasonSeale
         Character _attacker = new Character(0,0,1,ConsoleColor.Black,"i",1);
         Character _victim = new Character(0, 0, 1, ConsoleColor.Black, "i", 1);
         List<(Character a, Character v)> _attackEvents = new List<(Character, Character)>();
+        Character _currentEnemy = new Character(0,0,1,ConsoleColor.Black, "i", 1);
         public void HudUpdate(Player player)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -26,7 +27,8 @@ namespace PlayableRPG_MasonSeale
             if (_enemyAttack == true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Enemy HP: {_attacker.CurrentHP()}");
+                Console.WriteLine($"{_currentEnemy.ShowName()} HP: {_currentEnemy.CurrentHP()}");
+                _enemyAttack = false;
             }
 
             if(_hatfound == true)
@@ -106,6 +108,12 @@ namespace PlayableRPG_MasonSeale
         public void SwordMessage()
         {
             _swordFound = true;
+        }
+
+        public void ChangeCurrentEnemyDisplayed(Character newEnemy)
+        {
+            _currentEnemy = newEnemy;
+            _enemyAttack = true;
         }
     }
 }
