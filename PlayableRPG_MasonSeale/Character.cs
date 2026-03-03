@@ -69,6 +69,10 @@ namespace PlayableRPG_MasonSeale
             }
             _health.TakeDamage((painAmount - _defense));
         }
+        public void PenDamage(int painAmount)
+        {
+            _health.TakeDamage((painAmount));
+        }
 
         public void ChangeDamage(int newDamage)
         {

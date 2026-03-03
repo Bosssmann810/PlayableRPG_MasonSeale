@@ -12,6 +12,7 @@ namespace PlayableRPG_MasonSeale
     {
         List<(int,int)> _noGoZone = new List<(int, int)>();
         List<(int, int)> _healSpots = new List<(int, int)>();
+        List<(int, int)> _lavaSpots = new List<(int, int)>();
         List<(int, int)> _goldSpots = new List<(int, int)>();
         (int, int) _hatLocation;
         (int, int) _swordLocation;
@@ -50,6 +51,10 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == ':')
                     {
                         _endingLine = new Position(j, i);
+                    }
+                    if (map[i][j] == '=')
+                    {
+                        _lavaSpots.Add((j, i));
                     }
                     if (map[i][j] == '@')
                     {
@@ -121,6 +126,10 @@ namespace PlayableRPG_MasonSeale
                             continue;
                         }
                     }
+                    if (map[i][j] == '=')
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                    }
                     if (map[i][j] == '@')
                     {
                         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -155,6 +164,10 @@ namespace PlayableRPG_MasonSeale
             return _healSpots;
         }
 
+        public List<(int, int)> GetLavaSpots()
+        {
+            return _lavaSpots;
+        }
         public List<(int,int)> GetGoldSpots()
         {
             return _goldSpots;

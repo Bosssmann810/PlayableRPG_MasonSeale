@@ -39,6 +39,14 @@ namespace PlayableRPG_MasonSeale
 
         }
 
+        public void LavaCheck(Character entity, Map map, Hud hud)
+        {
+            if(map.GetLavaSpots().Contains((entity.GetXPos(), entity.GetYPos())))
+            {
+                entity.PenDamage(1);
+                hud.LavaMessage();
+            }
+        }
         public void BoundCheck(Character entity, Map map)
         {
             if(map.GetListNoGo().Contains((entity.GetXPos(), entity.GetYPos())))

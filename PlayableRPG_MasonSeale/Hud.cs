@@ -10,6 +10,7 @@ namespace PlayableRPG_MasonSeale
     {
         bool _AtkMessage = false;
         bool _healMessage = false;
+        bool _lavaMessage = false;
         bool _winMessage = false;
         bool _enemyDeathMessage = false;
         bool _enemyAttack = false;
@@ -50,6 +51,12 @@ namespace PlayableRPG_MasonSeale
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"{player.ShowName()} healed to full!");
                 _healMessage = false;
+            }
+            if(_lavaMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"{player.ShowName()} stepped in lava");
+                _lavaMessage = false;
             }
             if(_AtkMessage == true)
             {
@@ -123,6 +130,10 @@ namespace PlayableRPG_MasonSeale
             _enemyAttack = true;
         }
 
+        public void LavaMessage()
+        {
+            _lavaMessage = true;
+        }
         public void WinMessage()
         {
             _winMessage = true;
