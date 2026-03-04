@@ -27,6 +27,7 @@ namespace PlayableRPG_MasonSeale
         Hud hud;
         Player player;
         Enemy enemy;
+        Enemy secondEnemy;
         FastEnemy speedyEnemy;
         BeefyEnemy beefyEnemy;
         Map map;
@@ -37,6 +38,7 @@ namespace PlayableRPG_MasonSeale
             hud = new Hud();
             player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
+            secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
             speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
             beefyEnemy = new BeefyEnemy(player, 47, 10, 20, ConsoleColor.DarkRed, "&", 2);
             map = new Map();
@@ -66,6 +68,10 @@ namespace PlayableRPG_MasonSeale
                 {
                     enemy.Update();
                 }
+                if (secondEnemy.AliveChecker())
+                {
+                    secondEnemy.Update();
+                }
                 if (speedyEnemy.AliveChecker())
                 {
                     speedyEnemy.Update();
@@ -83,6 +89,8 @@ namespace PlayableRPG_MasonSeale
                 referee.AttackDetection(player, speedyEnemy, hud);
                 referee.EnemyAttackMessageDetection(beefyEnemy, player, hud);
                 referee.AttackDetection(player, beefyEnemy, hud);
+                referee.EnemyAttackMessageDetection(secondEnemy, player, hud);
+                referee.AttackDetection(player, secondEnemy, hud);
                 //run all detection if the player hit something else
                 referee.BoundCheck(player, map);
                 referee.PlayerHatFound(player, map, hud);
@@ -108,8 +116,21 @@ namespace PlayableRPG_MasonSeale
                 referee.BoundCheck(enemy, map);
                 referee.EnemyBumping(enemy, speedyEnemy);
                 referee.EnemyBumping(enemy, beefyEnemy);
+                referee.EnemyBumping(enemy, secondEnemy);
 
                 //second enemy moves
+                secondEnemy.Move();
+                if (secondEnemy.AliveChecker() == false)
+                {
+                    secondEnemy.RunDeath(map);
+                }
+                referee.AttackDetection(secondEnemy, player, hud);
+                referee.BoundCheck(secondEnemy, map);
+                referee.EnemyBumping(secondEnemy, enemy);
+                referee.EnemyBumping(secondEnemy, beefyEnemy);
+                referee.EnemyBumping(secondEnemy, speedyEnemy);
+                
+                //speedy enemy moves
                 speedyEnemy.Move();
                 if (speedyEnemy.AliveChecker() == false)
                 {
@@ -119,8 +140,9 @@ namespace PlayableRPG_MasonSeale
                 referee.BoundCheck(speedyEnemy, map);
                 referee.EnemyBumping(speedyEnemy, enemy);
                 referee.EnemyBumping(speedyEnemy, beefyEnemy);
+                referee.EnemyBumping(speedyEnemy, secondEnemy);
 
-                //third enemy moves (I could totally make this a list and loop function but I don't want to at the moment
+                //beefy enemy moves (I could totally make this a list and loop function but I don't want to at the moment
                 beefyEnemy.Move();
                 if (beefyEnemy.AliveChecker() == false)
                 {
@@ -130,6 +152,7 @@ namespace PlayableRPG_MasonSeale
                 referee.BoundCheck(beefyEnemy, map);
                 referee.EnemyBumping(beefyEnemy, enemy);
                 referee.EnemyBumping(beefyEnemy, speedyEnemy);
+                referee.EnemyBumping(beefyEnemy, secondEnemy);
                 
                 Console.Clear();
             }
