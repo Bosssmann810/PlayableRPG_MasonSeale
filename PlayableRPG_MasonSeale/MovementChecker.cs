@@ -100,7 +100,7 @@ namespace PlayableRPG_MasonSeale
                 player.ChangeColor(ConsoleColor.Cyan);
                 player.ChangeDefense(1);
                 map.CollectArmor();
-                hud.HatMessage();
+                hud.ArmorMessage();
                 _armorfound = true;
             }
         }

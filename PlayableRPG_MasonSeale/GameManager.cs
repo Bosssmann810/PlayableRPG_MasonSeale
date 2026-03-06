@@ -155,7 +155,7 @@ namespace PlayableRPG_MasonSeale
                 referee.EnemyBumping(beefyEnemy, secondEnemy);
                 
                 Console.Clear();
-                enemy.Disable(map);
+                //enemy.Disable(map);
             }
             Console.ReadKey(true);
         }
