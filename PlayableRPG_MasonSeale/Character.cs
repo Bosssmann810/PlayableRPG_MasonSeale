@@ -16,6 +16,8 @@ namespace PlayableRPG_MasonSeale
         protected string _icon;
         protected int _damage;
         protected int _defense = 0;
+        protected bool _enabled = true;
+        protected Position _lastPos;
         
         public virtual void Move()
         {
@@ -97,5 +99,17 @@ namespace PlayableRPG_MasonSeale
             _defense = newDefense;
         }
 
+        public void Enable()
+        {
+            _pos = _lastPos;
+            _enabled = true;
+
+        }
+        public void Disable(Map map)
+        {
+            _lastPos = _pos;
+            _pos = map.FindEndingLine();
+            _enabled = false;
+        }
     }
 }

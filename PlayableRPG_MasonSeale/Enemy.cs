@@ -42,6 +42,10 @@ namespace PlayableRPG_MasonSeale
                     _pos.SetposY(_pos.GetPositionY() - 1);
                 }
             }
+            if(_enabled == false)
+            {
+                DenyMovement();
+            }
         }
 
         public override void DenyMovement()

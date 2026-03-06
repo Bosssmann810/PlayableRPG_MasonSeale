@@ -15,3 +15,4 @@ C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\Playabl
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe.config

@@ -50,6 +50,10 @@ namespace PlayableRPG_MasonSeale
 
             }
             _canMove = false;
+            if (_enabled == false)
+            {
+                DenyMovement();
+            }
         }
 
         public override void DenyMovement()
