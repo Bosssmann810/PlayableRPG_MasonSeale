@@ -40,6 +40,7 @@ namespace PlayableRPG_MasonSeale
             if(_armorFound == true)
             {
                 Console.WriteLine("You found some armor");
+                _armorFound = false;
             }
             if (_swordFound == true)
             {
