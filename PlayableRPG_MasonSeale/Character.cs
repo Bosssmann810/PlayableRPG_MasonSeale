@@ -10,6 +10,7 @@ namespace PlayableRPG_MasonSeale
 {
     internal class Character
     {
+        Position _oldpos = new Position(0, 0);
         protected Health _health;
         protected Position _pos;
         protected ConsoleColor _color;
@@ -110,6 +111,18 @@ namespace PlayableRPG_MasonSeale
             _lastPos = _pos;
             _pos = map.FindEndingLine();
             _enabled = false;
+        }
+        public void RunDeath(Map map)
+        {
+            _icon = "";
+            _oldpos.SetposX(map.FindEndingLine().GetPositionX());
+            _oldpos.SetposY(map.FindEndingLine().GetPositionY());
+            DenyMovement();
+        }
+
+        public bool AliveChecker()
+        {
+            return _health.AliveCheck();
         }
     }
 }

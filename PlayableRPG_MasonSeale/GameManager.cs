@@ -41,9 +41,14 @@ namespace PlayableRPG_MasonSeale
             hud = new Hud();
             player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(enemy);
             secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(secondEnemy);
             speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
+            _enemyManager.Add(speedyEnemy);
             beefyEnemy = new BeefyEnemy(player, 47, 10, 20, ConsoleColor.DarkRed, "&", 2);
+            _enemyManager.Add(beefyEnemy);
+
             currentMap = firstMap;
             referee = new MovementChecker();
            
@@ -86,14 +91,12 @@ namespace PlayableRPG_MasonSeale
                 //player moves
                 player.Move();
                 //run all detection if the player hit an enemy
-                referee.EnemyAttackMessageDetection(enemy, player, hud);
-                referee.AttackDetection(player, enemy, hud);
-                referee.EnemyAttackMessageDetection(speedyEnemy, player, hud);
-                referee.AttackDetection(player, speedyEnemy, hud);
-                referee.EnemyAttackMessageDetection(beefyEnemy, player, hud);
-                referee.AttackDetection(player, beefyEnemy, hud);
-                referee.EnemyAttackMessageDetection(secondEnemy, player, hud);
-                referee.AttackDetection(player, secondEnemy, hud);
+                foreach(Character enemy in _enemyManager)
+                {
+                    referee.EnemyAttackMessageDetection(enemy, player, hud);
+                    referee.AttackDetection(player, enemy, hud);
+                }
+
                 if(referee.LoadMapCheck(player, currentMap) == true)
                 {
                     ChangeMap(secondMap, currentMap);
@@ -112,55 +115,23 @@ namespace PlayableRPG_MasonSeale
                     hud.HudUpdate(player);
                     break;
                 }
-
-                //first enemy moves
-                enemy.Move();
-                if (enemy.AliveChecker() == false)
+                foreach(Character enemy in _enemyManager)
                 {
-                    enemy.RunDeath(currentMap);
-                }
-                referee.AttackDetection(enemy, player, hud);
-                referee.BoundCheck(enemy, currentMap);
-                referee.EnemyBumping(enemy, speedyEnemy);
-                referee.EnemyBumping(enemy, beefyEnemy);
-                referee.EnemyBumping(enemy, secondEnemy);
-
-                //second enemy moves
-                secondEnemy.Move();
-                if (secondEnemy.AliveChecker() == false)
-                {
-                    secondEnemy.RunDeath(currentMap);
-                }
-                referee.AttackDetection(secondEnemy, player, hud);
-                referee.BoundCheck(secondEnemy, currentMap);
-                referee.EnemyBumping(secondEnemy, enemy);
-                referee.EnemyBumping(secondEnemy, beefyEnemy);
-                referee.EnemyBumping(secondEnemy, speedyEnemy);
-                
-                //speedy enemy moves
-                speedyEnemy.Move();
-                if (speedyEnemy.AliveChecker() == false)
-                {
-                    speedyEnemy.RunDeath(currentMap);
-                }
-                referee.AttackDetection(speedyEnemy, player, hud);
-                referee.BoundCheck(speedyEnemy, currentMap);
-                referee.EnemyBumping(speedyEnemy, enemy);
-                referee.EnemyBumping(speedyEnemy, beefyEnemy);
-                referee.EnemyBumping(speedyEnemy, secondEnemy);
-
-                //beefy enemy moves (I could totally make this a list and loop function but I don't want to at the moment
-                beefyEnemy.Move();
-                if (beefyEnemy.AliveChecker() == false)
-                {
-                    beefyEnemy.RunDeath(currentMap);
-                }
-                referee.AttackDetection(beefyEnemy, player, hud);
-                referee.BoundCheck(beefyEnemy, currentMap);
-                referee.EnemyBumping(beefyEnemy, enemy);
-                referee.EnemyBumping(beefyEnemy, speedyEnemy);
-                referee.EnemyBumping(beefyEnemy, secondEnemy);
-                
+                    enemy.Move();
+                    if(enemy.AliveChecker() == false)
+                    {
+                        enemy.RunDeath(currentMap);
+                    }
+                    referee.AttackDetection(enemy, player, hud);
+                    referee.BoundCheck(enemy, currentMap);
+                    foreach(Character otherenemy in _enemyManager)
+                    {
+                        if(otherenemy != enemy)
+                        {
+                            referee.EnemyBumping(enemy, otherenemy);
+                        }
+                    }
+                }     
                 Console.Clear();
                 //enemy.Disable(map);
                 
