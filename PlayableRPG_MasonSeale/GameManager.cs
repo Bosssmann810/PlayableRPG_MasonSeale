@@ -30,8 +30,11 @@ namespace PlayableRPG_MasonSeale
         Enemy secondEnemy;
         FastEnemy speedyEnemy;
         BeefyEnemy beefyEnemy;
-        Map map;
+        Map currentMap;
+        Map firstMap = new Map();
+        Map secondMap = new SecondMap();
         MovementChecker referee;
+        List<Character> _enemyManager = new List<Character>();
 
         public void Start()
         {
@@ -41,10 +44,10 @@ namespace PlayableRPG_MasonSeale
             secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
             speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
             beefyEnemy = new BeefyEnemy(player, 47, 10, 20, ConsoleColor.DarkRed, "&", 2);
-            map = new Map();
+            currentMap = firstMap;
             referee = new MovementChecker();
-
-            map.SetBoundries();
+           
+            currentMap.SetBoundries();
 
         }
         public void Update()
@@ -52,11 +55,11 @@ namespace PlayableRPG_MasonSeale
             while (true)
             {
                 //update map
-                map.Update();
+                currentMap.Update();
                 hud.HudUpdate(player);
                 if (player.AliveChecker() == false)
                 {
-                    Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
+                    Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("You Died");
                     enemy.Update();
@@ -91,17 +94,21 @@ namespace PlayableRPG_MasonSeale
                 referee.AttackDetection(player, beefyEnemy, hud);
                 referee.EnemyAttackMessageDetection(secondEnemy, player, hud);
                 referee.AttackDetection(player, secondEnemy, hud);
+                if(referee.LoadMapCheck(player, currentMap) == true)
+                {
+                    ChangeMap(secondMap, currentMap);
+                }
                 //run all detection if the player hit something else
-                referee.BoundCheck(player, map);
-                referee.PlayerHatFound(player, map, hud);
-                referee.PlayerSwordFound(player, map, hud);
-                referee.PlayerArmorFound(player, map, hud);
-                referee.PlayerHealCheck(player, map, hud);
-                referee.PlayerGoldCheck(player, map, hud);
-                referee.LavaCheck(player, map, hud);
-                if(referee.PlayerGoldCheck(player,map,hud) == true)
+                referee.BoundCheck(player, currentMap);
+                referee.PlayerHatFound(player, currentMap, hud);
+                referee.PlayerSwordFound(player, currentMap, hud);
+                referee.PlayerArmorFound(player, currentMap, hud);
+                referee.PlayerHealCheck(player, currentMap, hud);
+                referee.PlayerGoldCheck(player, currentMap, hud);
+                referee.LavaCheck(player, currentMap, hud);
+                if(referee.PlayerGoldCheck(player,currentMap,hud) == true)
                 { 
-                    Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
+                    Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
                     hud.HudUpdate(player);
                     break;
                 }
@@ -110,10 +117,10 @@ namespace PlayableRPG_MasonSeale
                 enemy.Move();
                 if (enemy.AliveChecker() == false)
                 {
-                    enemy.RunDeath(map);
+                    enemy.RunDeath(currentMap);
                 }
                 referee.AttackDetection(enemy, player, hud);
-                referee.BoundCheck(enemy, map);
+                referee.BoundCheck(enemy, currentMap);
                 referee.EnemyBumping(enemy, speedyEnemy);
                 referee.EnemyBumping(enemy, beefyEnemy);
                 referee.EnemyBumping(enemy, secondEnemy);
@@ -122,10 +129,10 @@ namespace PlayableRPG_MasonSeale
                 secondEnemy.Move();
                 if (secondEnemy.AliveChecker() == false)
                 {
-                    secondEnemy.RunDeath(map);
+                    secondEnemy.RunDeath(currentMap);
                 }
                 referee.AttackDetection(secondEnemy, player, hud);
-                referee.BoundCheck(secondEnemy, map);
+                referee.BoundCheck(secondEnemy, currentMap);
                 referee.EnemyBumping(secondEnemy, enemy);
                 referee.EnemyBumping(secondEnemy, beefyEnemy);
                 referee.EnemyBumping(secondEnemy, speedyEnemy);
@@ -134,10 +141,10 @@ namespace PlayableRPG_MasonSeale
                 speedyEnemy.Move();
                 if (speedyEnemy.AliveChecker() == false)
                 {
-                    speedyEnemy.RunDeath(map);
+                    speedyEnemy.RunDeath(currentMap);
                 }
                 referee.AttackDetection(speedyEnemy, player, hud);
-                referee.BoundCheck(speedyEnemy, map);
+                referee.BoundCheck(speedyEnemy, currentMap);
                 referee.EnemyBumping(speedyEnemy, enemy);
                 referee.EnemyBumping(speedyEnemy, beefyEnemy);
                 referee.EnemyBumping(speedyEnemy, secondEnemy);
@@ -146,19 +153,28 @@ namespace PlayableRPG_MasonSeale
                 beefyEnemy.Move();
                 if (beefyEnemy.AliveChecker() == false)
                 {
-                    beefyEnemy.RunDeath(map);
+                    beefyEnemy.RunDeath(currentMap);
                 }
                 referee.AttackDetection(beefyEnemy, player, hud);
-                referee.BoundCheck(beefyEnemy, map);
+                referee.BoundCheck(beefyEnemy, currentMap);
                 referee.EnemyBumping(beefyEnemy, enemy);
                 referee.EnemyBumping(beefyEnemy, speedyEnemy);
                 referee.EnemyBumping(beefyEnemy, secondEnemy);
                 
                 Console.Clear();
                 //enemy.Disable(map);
+                
             }
             Console.ReadKey(true);
         }
+        public void ChangeMap(Map newmap, Map currentmap)
+        {
+            player.SetPosition(newmap.GetNewMapSpawn().Item1, newmap.GetNewMapSpawn().Item2);
+            currentmap = newmap;
+            currentmap.SetBoundries();
+            currentmap.Update();
+        }
     }
+
 }
 

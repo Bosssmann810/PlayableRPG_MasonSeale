@@ -21,9 +21,12 @@ namespace PlayableRPG_MasonSeale
         bool _swordCollected = false;
         bool _armorCollected = false;
         Position _endingLine = new Position(1,1);
+        (int,int) _exit;
+        bool _active = true;
+        (int, int) _spawn;
         
         //sets all parts that need to be interacted with, borders, the hat location and heal spots.
-        public void SetBoundries()
+        public virtual void SetBoundries()
         {
             string path = "map.txt";
             string[] map = File.ReadAllLines(path);
@@ -64,11 +67,15 @@ namespace PlayableRPG_MasonSeale
                     {
                         _goldSpots.Add((j, i));
                     }
+                    if (map[i][j] == '[')
+                    {
+                        _exit = (j, i);
+                    }
                 }
             }
         }
         //draws the map to the screen
-        public void Update()
+        public virtual void Update()
         {
             string path = "Map.txt";
             string[] map = File.ReadAllLines(path);
@@ -201,6 +208,14 @@ namespace PlayableRPG_MasonSeale
         public Position FindEndingLine()
         {
             return _endingLine;
+        }
+        public (int,int) GetMapLoadZone()
+        {
+            return _exit;
+        }
+        public (int,int) GetNewMapSpawn()
+        {
+            return _spawn;
         }
 
     }

@@ -87,7 +87,15 @@ namespace PlayableRPG_MasonSeale
                 _hatfound = true;
             }
         }
+        public bool  LoadMapCheck(Player player, Map currentmap)
+        {
+            if(currentmap.GetMapLoadZone() == (player.GetXPos(), player.GetYPos()))
+            {
+                return true;
 
+            }
+            return false;
+        }
         public void PlayerArmorFound(Player player, Map map, Hud hud)
         {
             if (map.FindArmor() == (player.GetXPos(), player.GetYPos()))

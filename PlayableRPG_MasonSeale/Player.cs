@@ -119,5 +119,10 @@ namespace PlayableRPG_MasonSeale
             return "You";
         }
 
+        public void SetPosition(int x, int y)
+        {
+            _pos.SetposX(x);
+            _pos.SetposY(y);
+        }
     }
 }
