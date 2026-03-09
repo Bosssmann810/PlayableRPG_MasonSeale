@@ -28,6 +28,29 @@ namespace PlayableRPG_MasonSeale
         Player player;
         Enemy enemy;
         Enemy secondEnemy;
+        Enemy hoard1;
+        Enemy hoard2;
+        Enemy hoard3;
+        Enemy hoard4;
+        Enemy hoard5;
+        Enemy hoard6;
+        Enemy hoard7;
+        Enemy hoard8;
+        Enemy hoard9;
+        Enemy hoard10;
+        Enemy hoard11;
+        Enemy hoard12;
+        Enemy hoard13;
+        Enemy hoard14;
+        Enemy hoard15; 
+        Enemy hoard16;
+        Enemy hoard17;
+        Enemy hoard18;
+        Enemy hoard19;
+        Enemy hoard20;
+        Enemy hoard21;
+        Enemy hoard22;
+        Enemy fred;
         FastEnemy speedyEnemy;
         BeefyEnemy beefyEnemy;
         Map currentMap;
@@ -46,8 +69,54 @@ namespace PlayableRPG_MasonSeale
             _enemyManager.Add(secondEnemy);
             speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
             _enemyManager.Add(speedyEnemy);
-            beefyEnemy = new BeefyEnemy(player, 47, 10, 20, ConsoleColor.DarkRed, "&", 2);
+            beefyEnemy = new BeefyEnemy(player, 45, 10, 20, ConsoleColor.DarkRed, "&", 2);
             _enemyManager.Add(beefyEnemy);
+            hoard1 = new Enemy(player, 52, 5, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard1);
+            hoard2 = new Enemy(player, 53, 5, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard2);
+            hoard3 = new Enemy(player, 54, 5, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard3);
+            hoard4 = new Enemy(player, 55, 5, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard4);
+            hoard5 = new Enemy(player, 56, 5, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard5);
+            hoard6 = new Enemy(player, 52, 6, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard6);
+            hoard7 = new Enemy(player, 53, 6, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard7);
+            hoard8 = new Enemy(player, 54, 6, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard8);
+            hoard9 = new Enemy(player, 55, 6, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard9);
+            hoard10 = new Enemy(player, 56, 6, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard10);
+            hoard11 = new Enemy(player, 52, 7, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard11);
+            hoard12 = new Enemy(player, 53, 7, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard12);
+            hoard13 = new Enemy(player, 54, 7, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard13);
+            hoard14 = new Enemy(player, 55, 7, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard14);
+            hoard15 = new Enemy(player, 56, 7, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard15);
+            hoard16 = new Enemy(player, 52, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard16);
+            hoard17 = new Enemy(player, 53, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard16);
+            hoard18 = new Enemy(player, 54, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard18);
+            hoard19 = new Enemy(player, 55, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard19);
+            hoard20 = new Enemy(player, 56, 8, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard20);
+            hoard21 = new Enemy(player, 52, 9, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard21);
+            hoard22 = new Enemy(player, 53, 9, 10, ConsoleColor.Red, "i", 2);
+            _enemyManager.Add(hoard22);
+            fred = new Enemy(player, 54, 9, 10, ConsoleColor.DarkRed, "i", 2);
+            _enemyManager.Add(fred);
 
             currentMap = firstMap;
             referee = new MovementChecker();
@@ -72,22 +141,14 @@ namespace PlayableRPG_MasonSeale
                     break;
                 }
                 player.Update();
-                if (enemy.AliveChecker())
+                foreach(Character enemy in _enemyManager)
                 {
-                    enemy.Update();
+                    if (enemy.AliveChecker())
+                    {
+                        enemy.Update();
+                    }
                 }
-                if (secondEnemy.AliveChecker())
-                {
-                    secondEnemy.Update();
-                }
-                if (speedyEnemy.AliveChecker())
-                {
-                    speedyEnemy.Update();
-                }
-                if (beefyEnemy.AliveChecker())
-                {
-                    beefyEnemy.Update();
-                }
+              
                 //player moves
                 player.Move();
                 //run all detection if the player hit an enemy
@@ -120,7 +181,7 @@ namespace PlayableRPG_MasonSeale
                     enemy.Move();
                     if(enemy.AliveChecker() == false)
                     {
-                        enemy.RunDeath(currentMap);
+                        enemy.Disable(currentMap);
                     }
                     referee.AttackDetection(enemy, player, hud);
                     referee.BoundCheck(enemy, currentMap);

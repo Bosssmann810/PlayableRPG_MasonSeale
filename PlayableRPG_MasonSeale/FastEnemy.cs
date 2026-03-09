@@ -76,13 +76,6 @@ namespace PlayableRPG_MasonSeale
         {
             return _health.GetCurrentHP();
         }
-        public void RunDeath(Map map)
-        {
-            _icon = "";
-            _oldpos.SetposX(map.FindEndingLine().GetPositionX());
-            _oldpos.SetposY(map.FindEndingLine().GetPositionY());
-            DenyMovement();
-        }
         public override string ShowName()
         {
             return "The Fast Enemy";

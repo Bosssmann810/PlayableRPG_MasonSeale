@@ -51,8 +51,10 @@ namespace PlayableRPG_MasonSeale
         //placeholder function
         public virtual void DenyMovement()
         {
-            
+            _pos.SetposX(_oldpos.GetPositionX());
+            _pos.SetposY(_oldpos.GetPositionY());
         }
+   
         //returns x pos
         public int GetYPos()
         {
