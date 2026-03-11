@@ -19,6 +19,10 @@ namespace PlayableRPG_MasonSeale
         //this enemy will never fail a movement and will always head towards the player moving diagonally if its faster.
         public override void Move()
         {
+            if (_enabled == false)
+            {
+                return;
+            }
             _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
             
             
@@ -50,6 +54,10 @@ namespace PlayableRPG_MasonSeale
 
         public override void DenyMovement()
         {
+            if (_enabled == false)
+            {
+                return;
+            }
             _pos.SetposX(_oldpos.GetPositionX());
             _pos.SetposY(_oldpos.GetPositionY());
         }

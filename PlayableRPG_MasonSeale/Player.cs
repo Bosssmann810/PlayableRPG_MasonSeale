@@ -13,7 +13,7 @@ namespace PlayableRPG_MasonSeale
         bool _foundHat = false;
         int _facingDirection;
         bool _foundSword = false;
-
+        int _goldAmount = 0;
         public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
         {
             
@@ -123,6 +123,14 @@ namespace PlayableRPG_MasonSeale
         {
             _pos.SetposX(x);
             _pos.SetposY(y);
+        }
+        public void AddGold()
+        {
+            _goldAmount += 1;
+        }
+        public int CheckGold()
+        {
+            return _goldAmount;
         }
     }
 }

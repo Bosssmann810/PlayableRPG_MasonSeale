@@ -20,6 +20,10 @@ namespace PlayableRPG_MasonSeale
         //this enemy will not be able to move two times in a row, it will always fail every second movement.
         public override void Move()
         {
+            if (_enabled == false)
+            {
+                return;
+            }
             _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
 
             if (_canMove == false)
@@ -58,6 +62,10 @@ namespace PlayableRPG_MasonSeale
 
         public override void DenyMovement()
         {
+            if (_enabled == false)
+            {
+                return;
+            }
             _pos.SetposX(_oldpos.GetPositionX());
             _pos.SetposY(_oldpos.GetPositionY());
         }

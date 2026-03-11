@@ -8,6 +8,7 @@ namespace PlayableRPG_MasonSeale
 {
     internal class Hud
     {
+        bool _goldMessage = false;
         bool _AtkMessage = false;
         bool _healMessage = false;
         bool _lavaMessage = false;
@@ -25,6 +26,8 @@ namespace PlayableRPG_MasonSeale
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"HP: {player.ShowHealth()}");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Gold: {player.CheckGold()}");
             if (_enemyAttack == true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -46,6 +49,12 @@ namespace PlayableRPG_MasonSeale
             {
                 Console.WriteLine("You found a Sword");
                 _swordFound = false;
+            }
+            if (_goldMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("You Found Some gold");
+                _goldMessage = false;
             }
             if (_healMessage == true)
             {
@@ -93,6 +102,11 @@ namespace PlayableRPG_MasonSeale
             _attackEvents.Add((attacker, victim));
             _AtkMessage = true;
         }
+        public void DeathMessage(Character victim)
+        {
+            CurrentVictimUpdate(victim);
+            _enemyDeathMessage = true;
+        }
         
         public void HealMessage()
         {
@@ -138,6 +152,10 @@ namespace PlayableRPG_MasonSeale
         public void WinMessage()
         {
             _winMessage = true;
+        }
+        public void GoldMessage()
+        {
+            _goldMessage = true;
         }
     }
 }

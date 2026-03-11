@@ -14,6 +14,8 @@ namespace PlayableRPG_MasonSeale
         List<(int, int)> _healSpots = new List<(int, int)>();
         List<(int, int)> _lavaSpots = new List<(int, int)>();
         List<(int, int)> _goldSpots = new List<(int, int)>();
+        List<(int, int)> _goldManager = new List<(int, int)>();
+        List<(int, int)> _itemManager = new List<(int, int)>();
         (int, int) _hatLocation;
         (int, int) _swordLocation;
         (int, int) _armorLocation;
@@ -50,6 +52,7 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == '!')
                     {
                         _swordLocation = (j, i);
+                        _itemManager.Add((j, i));
                     }
                     if (map[i][j] == ':')
                     {
@@ -62,10 +65,12 @@ namespace PlayableRPG_MasonSeale
                     if (map[i][j] == '@')
                     {
                         _armorLocation = (j, i);
+                        _itemManager.Add((j, i));
                     }
                     if (map[i][j] == '-')
                     {
                         _goldSpots.Add((j, i));
+                        _itemManager.Add((j, i));
                     }
                     if (map[i][j] == '[')
                     {
@@ -97,8 +102,14 @@ namespace PlayableRPG_MasonSeale
                         Console.ForegroundColor = ConsoleColor.Green;
                     }
                     if (map[i][j] == '-')
-                    {
+                    { 
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        if (_goldSpots.Contains((j, i)) == false)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.Write('`');
+                            continue;
+                        }
                     }
                     if (map[i][j] == '~')
                     {
@@ -216,6 +227,11 @@ namespace PlayableRPG_MasonSeale
         public (int,int) GetNewMapSpawn()
         {
             return _spawn;
+        }
+
+        public void RemoveGold(Position pos)
+        {
+            _goldSpots.Remove((pos.GetPositionX(), pos.GetPositionY()));
         }
 
     }

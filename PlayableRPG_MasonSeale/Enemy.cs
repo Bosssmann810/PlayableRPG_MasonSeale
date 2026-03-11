@@ -17,6 +17,10 @@ namespace PlayableRPG_MasonSeale
 
         public override void Move()
         {
+            if (_enabled==false)
+            {
+                return;
+            }
             _oldpos = new Position(_pos.GetPositionX(), _pos.GetPositionY());
             Random _rng = new Random();
             int _moveChoice = _rng.Next(0, 2);
@@ -42,14 +46,15 @@ namespace PlayableRPG_MasonSeale
                     _pos.SetposY(_pos.GetPositionY() - 1);
                 }
             }
-            if(_enabled == false)
-            {
-                DenyMovement();
-            }
+
         }
 
         public override void DenyMovement()
         {
+            if (_enabled == false)
+            {
+                return;
+            }
             _pos.SetposX(_oldpos.GetPositionX());
             _pos.SetposY(_oldpos.GetPositionY());
         }

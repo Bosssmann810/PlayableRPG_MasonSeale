@@ -52,6 +52,7 @@ namespace PlayableRPG_MasonSeale
         Enemy hoard22;
         Enemy fred;
         FastEnemy speedyEnemy;
+        FastEnemy secondSpeedEnemy;
         BeefyEnemy beefyEnemy;
         Map currentMap;
         Map firstMap = new Map();
@@ -69,6 +70,8 @@ namespace PlayableRPG_MasonSeale
             _enemyManager.Add(secondEnemy);
             speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
             _enemyManager.Add(speedyEnemy);
+            secondSpeedEnemy = new FastEnemy(player, 42, 2, 5, ConsoleColor.Magenta, "x", 1);
+            _enemyManager.Add(secondSpeedEnemy);
             beefyEnemy = new BeefyEnemy(player, 45, 10, 20, ConsoleColor.DarkRed, "&", 2);
             _enemyManager.Add(beefyEnemy);
             hoard1 = new Enemy(player, 52, 5, 10, ConsoleColor.Red, "i", 2);
@@ -170,10 +173,12 @@ namespace PlayableRPG_MasonSeale
                 referee.PlayerHealCheck(player, currentMap, hud);
                 referee.PlayerGoldCheck(player, currentMap, hud);
                 referee.LavaCheck(player, currentMap, hud);
-                if(referee.PlayerGoldCheck(player,currentMap,hud) == true)
+                if(player.CheckGold() >= 26)
                 { 
                     Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
+                    hud.WinMessage();
                     hud.HudUpdate(player);
+                    
                     break;
                 }
                 foreach(Character enemy in _enemyManager)
