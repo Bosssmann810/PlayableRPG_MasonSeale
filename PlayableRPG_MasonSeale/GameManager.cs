@@ -63,7 +63,7 @@ namespace PlayableRPG_MasonSeale
         public void Start()
         {
             hud = new Hud();
-            player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
+            player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 20);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
             _enemyManager.Add(enemy);
             secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
@@ -136,6 +136,8 @@ namespace PlayableRPG_MasonSeale
                 hud.HudUpdate(player);
                 if (player.AliveChecker() == false)
                 {
+                    Console.Clear();
+                    currentMap.Update();
                     Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("You Died");
@@ -174,8 +176,9 @@ namespace PlayableRPG_MasonSeale
                 referee.PlayerGoldCheck(player, currentMap, hud);
                 referee.LavaCheck(player, currentMap, hud);
                 if(player.CheckGold() >= 26)
-                { 
-                    Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
+                {
+                    Console.Clear();
+                    currentMap.Update();
                     hud.WinMessage();
                     hud.HudUpdate(player);
                     
