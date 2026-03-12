@@ -63,7 +63,7 @@ namespace PlayableRPG_MasonSeale
         public void Start()
         {
             hud = new Hud();
-            player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 20);
+            player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
             _enemyManager.Add(enemy);
             secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
