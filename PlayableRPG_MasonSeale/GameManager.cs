@@ -140,9 +140,15 @@ namespace PlayableRPG_MasonSeale
                     currentMap.Update();
                     Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.WriteLine("You Died");
-                    enemy.Update();
-                    speedyEnemy.Update();
+                    Console.WriteLine();
+                    Console.WriteLine("You Died. Game Over");
+                    foreach (Character enemy in _enemyManager)
+                    {
+                        if (enemy.AliveChecker())
+                        {
+                            enemy.Update();
+                        }
+                    }
                     break;
                 }
                 player.Update();
@@ -207,6 +213,7 @@ namespace PlayableRPG_MasonSeale
             }
             Console.ReadKey(true);
         }
+        //this dose not work and as such is never used.
         public void ChangeMap(Map newmap, Map currentmap)
         {
             player.SetPosition(newmap.GetNewMapSpawn().Item1, newmap.GetNewMapSpawn().Item2);
