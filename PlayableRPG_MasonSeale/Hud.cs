@@ -15,7 +15,7 @@ namespace PlayableRPG_MasonSeale
         bool _winMessage = false;
         bool _enemyDeathMessage = false;
         bool _enemyAttack = false;
-        bool _hatfound = false;
+        bool _bombfound = false;
         bool _swordFound = false;
         bool _armorFound = false;
         Character _attacker = new Character(0,0,1,ConsoleColor.Black,"i",1);
@@ -35,10 +35,10 @@ namespace PlayableRPG_MasonSeale
                 _enemyAttack = false;
             }
 
-            if(_hatfound == true)
+            if(_bombfound == true)
             {
                 Console.WriteLine("You found a bomb");
-                _hatfound = false;
+                _bombfound = false;
             }
             if(_armorFound == true)
             {
@@ -118,9 +118,9 @@ namespace PlayableRPG_MasonSeale
             _enemyDeathMessage = true;
         }
 
-        public void HatMessage()
+        public void BombMessage()
         {
-            _hatfound = true;
+            _bombfound = true;
         }
         public void ArmorMessage()
         {

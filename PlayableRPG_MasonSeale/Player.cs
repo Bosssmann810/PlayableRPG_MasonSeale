@@ -10,7 +10,7 @@ namespace PlayableRPG_MasonSeale
     internal class Player : Character
     {
         Position _oldPos;
-        bool _foundHat = false;
+        bool _foundBomb = false;
         int _facingDirection;
         bool _foundSword = false;
         int _goldAmount = 0;
@@ -49,10 +49,10 @@ namespace PlayableRPG_MasonSeale
             }
             if(_playerInput.Key == ConsoleKey.E)
             {
-                if(_foundHat == true) 
+                if(_foundBomb == true) 
                 { 
                     _bomb.DropBomb(this); 
-                    _foundHat = false; 
+                    _foundBomb = false; 
                 }
             }
             //attack overlap is handled by MovementChecker
@@ -75,7 +75,7 @@ namespace PlayableRPG_MasonSeale
             Console.ForegroundColor = _color;
             Console.Write(_icon);
             //this only works if the player has found the hat.
-            if (_foundHat)
+            if (_foundBomb)
             {
                
 
@@ -106,17 +106,17 @@ namespace PlayableRPG_MasonSeale
             return _health.AliveCheck();
         }
         //displays the hat when called
-        public void HatCollected()
+        public void BombCollected()
         {
-            _foundHat = true;
+            _foundBomb = true;
         }
         public void SwordCollected()
         {
             _foundSword = true;
         }
-        public bool HatMessage()
+        public bool BombMessage()
         {
-            return _foundHat;
+            return _foundBomb;
         }
         public bool SwordMessage()
         {

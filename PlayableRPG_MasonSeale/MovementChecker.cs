@@ -12,7 +12,7 @@ namespace PlayableRPG_MasonSeale
     internal class MovementChecker
     {
         bool _armorfound = false;
-        bool _hatfound = false;
+        bool _bombFound = false;
         bool _swordFound = false;
         //this is called after every time something moves to detect any attacks made
         public void AttackDetection(Character attacker, Character victim, Hud hud)
@@ -75,18 +75,18 @@ namespace PlayableRPG_MasonSeale
         }
         public void PlayerHatFound(Player player, Map map, Hud hud, bomb bomb)
         {
-            if (map.FindHat() == (player.GetXPos(), player.GetYPos()))
+            if (map.BombHat() == (player.GetXPos(), player.GetYPos()))
             {
-                if(_hatfound == true)
+                if(_bombFound == true)
                 {
                     return;
                 }
                 player.DenyMovement();
-                player.HatCollected();
+                player.BombCollected();
                 bomb.PickedUp(player);
-                map.CollectHat();
-                hud.HatMessage();
-                _hatfound = true;
+                map.CollectBomb();
+                hud.BombMessage();
+                _bombFound = true;
             }
         }
         public bool  LoadMapCheck(Player player, Map currentmap)

@@ -15,7 +15,7 @@ namespace PlayableRPG_MasonSeale
         List<(int, int)> _explsoionZone = new List<(int, int)>();
         public bomb(Map map)
         {
-            _pos = new Position(map.FindHat().Item1, map.FindHat().Item2);
+            _pos = new Position(map.BombHat().Item1, map.BombHat().Item2);
         }
         
         public void Update(Player player)

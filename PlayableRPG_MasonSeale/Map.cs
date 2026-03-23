@@ -16,10 +16,10 @@ namespace PlayableRPG_MasonSeale
         List<(int, int)> _goldSpots = new List<(int, int)>();
         List<(int, int)> _goldManager = new List<(int, int)>();
         List<(int, int)> _itemManager = new List<(int, int)>();
-        (int, int) _hatLocation;
+        (int, int) _bombLocation;
         (int, int) _swordLocation;
         (int, int) _armorLocation;
-        bool _hatCollected = false;
+        bool _bombCollected = false;
         bool _swordCollected = false;
         bool _armorCollected = false;
         Position _endingLine = new Position(1,1);
@@ -47,7 +47,7 @@ namespace PlayableRPG_MasonSeale
                     }
                     if (map[i][j] == '*')
                     {
-                        _hatLocation = (j, i);
+                        _bombLocation = (j, i);
                     }
                     if (map[i][j] == '!')
                     {
@@ -127,7 +127,7 @@ namespace PlayableRPG_MasonSeale
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         //if the hat is collected just draw a normal grass tile instead.
-                        if (_hatCollected == true)
+                        if (_bombCollected == true)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
                             Console.Write('`');
@@ -190,9 +190,9 @@ namespace PlayableRPG_MasonSeale
         {
             return _goldSpots;
         }
-        public (int,int) FindHat()
+        public (int,int) BombHat()
         {
-            return _hatLocation;
+            return _bombLocation;
         }
         public (int, int) FindSword()
         {
@@ -202,9 +202,9 @@ namespace PlayableRPG_MasonSeale
         {
             return _armorLocation;
         }
-        public void CollectHat()
+        public void CollectBomb()
         {
-            _hatCollected = true;
+            _bombCollected = true;
         }
         public void CollectSword()
         {
