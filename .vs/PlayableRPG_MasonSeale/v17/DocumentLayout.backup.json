@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\mason unity\\PlayableRPG_MasonSeale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\beefyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\beefyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\beefyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\mason unity\\playablerpg_masonseale\\playablerpg_masonseale\\secondmap.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\mason unity\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\secondmap.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\secondmap.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
@@ -90,8 +90,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\bomb.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T11:50:37.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T11:50:37.303Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Secondmap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T11:53:31.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T11:53:31.131Z"
             },
             {
               "$type": "Document",
@@ -114,7 +112,7 @@
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
               "ToolTip": "C:\\mason unity\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
               "RelativeToolTip": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEIAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-03T14:07:41.309Z",
               "EditorCaption": ""
@@ -141,8 +139,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\map.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-11T12:09:50.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T12:09:50.677Z"
             },
             {
               "$type": "Document",
@@ -154,8 +151,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Map.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAAIwM4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T13:33:04.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-09T13:33:04.521Z"
             },
             {
               "$type": "Document",
@@ -167,8 +163,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Player.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAQwGsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:25:46.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T12:25:46.878Z"
             },
             {
               "$type": "Document",
@@ -252,8 +247,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Hud.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAgwCUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T13:15:17.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T13:15:17.028Z"
             },
             {
               "$type": "Document",
@@ -265,8 +259,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\MovementChecker.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAmwFcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:16:09.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T14:16:09.504Z"
             },
             {
               "$type": "Document",
@@ -278,8 +271,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\secondmap.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-09T11:44:06.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T11:44:06.554Z"
             }
           ]
         }
