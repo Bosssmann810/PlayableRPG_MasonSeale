@@ -26,6 +26,7 @@ namespace PlayableRPG_MasonSeale
         }
         Hud hud;
         Player player;
+        bomb bomb;
         Enemy enemy;
         Enemy secondEnemy;
         Enemy hoard1;
@@ -123,9 +124,10 @@ namespace PlayableRPG_MasonSeale
 
             currentMap = firstMap;
             referee = new MovementChecker();
-           
+            
             currentMap.SetBoundries();
-
+            bomb = new bomb(currentMap);
+            player.GetBomb(bomb);
         }
         public void Update()
         {
@@ -159,7 +161,7 @@ namespace PlayableRPG_MasonSeale
                         enemy.Update();
                     }
                 }
-              
+                bomb.Update(player);
                 //player moves
                 player.Move();
                 //run all detection if the player hit an enemy
@@ -175,7 +177,8 @@ namespace PlayableRPG_MasonSeale
                 }
                 //run all detection if the player hit something else
                 referee.BoundCheck(player, currentMap);
-                referee.PlayerHatFound(player, currentMap, hud);
+                referee.PlayerHatFound(player, currentMap, hud, bomb);
+                
                 referee.PlayerSwordFound(player, currentMap, hud);
                 referee.PlayerArmorFound(player, currentMap, hud);
                 referee.PlayerHealCheck(player, currentMap, hud);
@@ -205,6 +208,10 @@ namespace PlayableRPG_MasonSeale
                         {
                             referee.EnemyBumping(enemy, otherenemy);
                         }
+                    }
+                    if(bomb.GetExplosionZone().Contains((enemy.GetXPos(), enemy.GetYPos())))
+                    {
+                        enemy.Pain(10);
                     }
                 }     
                 Console.Clear();

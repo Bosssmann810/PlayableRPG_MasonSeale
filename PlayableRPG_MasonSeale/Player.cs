@@ -14,6 +14,7 @@ namespace PlayableRPG_MasonSeale
         int _facingDirection;
         bool _foundSword = false;
         int _goldAmount = 0;
+        bomb _bomb;
         public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
         {
             
@@ -46,6 +47,14 @@ namespace PlayableRPG_MasonSeale
                 _pos.SetposX(_pos.GetPositionX() + 1);
                 _facingDirection = 1;
             }
+            if(_playerInput.Key == ConsoleKey.E)
+            {
+                if(_foundHat == true) 
+                { 
+                    _bomb.DropBomb(this); 
+                    _foundHat = false; 
+                }
+            }
             //attack overlap is handled by MovementChecker
         }
         //returns the players x position
@@ -68,9 +77,8 @@ namespace PlayableRPG_MasonSeale
             //this only works if the player has found the hat.
             if (_foundHat)
             {
-                Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY() - 1);
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.Write('*');
+               
+
             }
             if (_foundSword)
             {
@@ -131,6 +139,10 @@ namespace PlayableRPG_MasonSeale
         public int CheckGold()
         {
             return _goldAmount;
+        }
+        public void GetBomb(bomb bomb)
+        {
+            _bomb = bomb;
         }
     }
 }

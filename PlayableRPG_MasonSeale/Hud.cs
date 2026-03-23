@@ -37,7 +37,7 @@ namespace PlayableRPG_MasonSeale
 
             if(_hatfound == true)
             {
-                Console.WriteLine("You found a hat");
+                Console.WriteLine("You found a bomb");
                 _hatfound = false;
             }
             if(_armorFound == true)

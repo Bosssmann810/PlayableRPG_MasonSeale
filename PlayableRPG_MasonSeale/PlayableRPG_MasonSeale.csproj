@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeefyEnemy.cs" />
+    <Compile Include="bomb.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="FastEnemy.cs" />

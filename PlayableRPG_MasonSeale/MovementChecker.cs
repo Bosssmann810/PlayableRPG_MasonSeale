@@ -73,7 +73,7 @@ namespace PlayableRPG_MasonSeale
             }
 
         }
-        public void PlayerHatFound(Player player, Map map, Hud hud)
+        public void PlayerHatFound(Player player, Map map, Hud hud, bomb bomb)
         {
             if (map.FindHat() == (player.GetXPos(), player.GetYPos()))
             {
@@ -83,6 +83,7 @@ namespace PlayableRPG_MasonSeale
                 }
                 player.DenyMovement();
                 player.HatCollected();
+                bomb.PickedUp(player);
                 map.CollectHat();
                 hud.HatMessage();
                 _hatfound = true;
@@ -124,7 +125,7 @@ namespace PlayableRPG_MasonSeale
                 player.DenyMovement();
                 player.SwordCollected();
                 map.CollectSword();
-                player.ChangeDamage(2);
+                player.ChangeDamage(5);
                 hud.SwordMessage();
                 _swordFound = true;
             }
