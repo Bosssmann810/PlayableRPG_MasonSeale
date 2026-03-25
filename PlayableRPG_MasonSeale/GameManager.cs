@@ -122,7 +122,7 @@ namespace PlayableRPG_MasonSeale
             fred = new Enemy(player, 54, 9, 10, ConsoleColor.DarkRed, "i", 2);
             _enemyManager.Add(fred);
 
-            currentMap = firstMap;
+            currentMap = new Map();
             referee = new MovementChecker();
             
             currentMap.SetBoundries();
@@ -194,8 +194,13 @@ namespace PlayableRPG_MasonSeale
                     break;
                 }
                 foreach(Character enemy in _enemyManager)
-                {
-                    enemy.Move();
+                {  
+                    if(bomb.GetExplosionZone().Contains((enemy.GetXPos(), enemy.GetYPos())))
+                    {
+                        enemy.Pain(10);
+                    }
+                    enemy.Move();  
+                  
                     if(enemy.AliveChecker() == false)
                     {
                         enemy.Disable(currentMap);
@@ -209,12 +214,11 @@ namespace PlayableRPG_MasonSeale
                             referee.EnemyBumping(enemy, otherenemy);
                         }
                     }
-                    if(bomb.GetExplosionZone().Contains((enemy.GetXPos(), enemy.GetYPos())))
-                    {
-                        enemy.Pain(10);
-                    }
-                }     
-                Console.Clear();
+
+                } 
+                hud.WipeHud(currentMap);    
+                Console.SetCursorPosition(0,0);
+                
                 //enemy.Disable(map);
                 
             }
@@ -227,6 +231,16 @@ namespace PlayableRPG_MasonSeale
             currentmap = newmap;
             currentmap.SetBoundries();
             currentmap.Update();
+        }
+
+        //this is called after the game ends
+        public void PostGameDialouge()
+        {
+            _enemyManager.Clear();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Would You like play again?");
+            Console.WriteLine("Press Esc to quit or R to play again");
         }
     }
 

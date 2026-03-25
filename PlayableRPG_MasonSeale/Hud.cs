@@ -157,5 +157,19 @@ namespace PlayableRPG_MasonSeale
         {
             _goldMessage = true;
         }
+        public void WipeHud(Map map)
+        {
+            Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+            Console.WriteLine("                                            ");
+
+        }
     }
 }
