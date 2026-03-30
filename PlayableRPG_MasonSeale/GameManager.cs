@@ -238,7 +238,7 @@ namespace PlayableRPG_MasonSeale
                 windowY = Console.WindowHeight;
                 windowX = Console.WindowWidth;
                 Console.Clear();
-                //Console.Write("\u001b[3J\u001b[H\u001b[2J");
+                Console.Write("\u001b[3J\u001b[H\u001b[2J");
             }
 
         }

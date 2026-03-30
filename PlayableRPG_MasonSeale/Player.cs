@@ -71,7 +71,7 @@ namespace PlayableRPG_MasonSeale
         //this function will be in anything that needs to be updated, and they will all be placed into the update method in the main program.
         public override void Update()
         {
-            if(_pos.GetPositionY() > Console.WindowHeight)
+            if(_pos.GetPositionY() >= Console.WindowHeight)
             {
                 return;
             }

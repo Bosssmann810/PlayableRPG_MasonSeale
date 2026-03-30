@@ -33,7 +33,7 @@ namespace PlayableRPG_MasonSeale
             }
             if(_held == false)
             {
-                if (_pos.GetPositionY() > Console.WindowHeight|| _pos.GetPositionX()> Console.WindowWidth)
+                if (_pos.GetPositionY() >= Console.WindowHeight|| _pos.GetPositionX()>= Console.WindowWidth)
                 {
                     return;
                 }
