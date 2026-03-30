@@ -33,6 +33,10 @@ namespace PlayableRPG_MasonSeale
             }
             if(_held == false)
             {
+                if (_pos.GetPositionY() > Console.WindowHeight|| _pos.GetPositionX()> Console.WindowWidth)
+                {
+                    return;
+                }
                 Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY());
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 if(_timeLeft == 1)

@@ -60,9 +60,13 @@ namespace PlayableRPG_MasonSeale
         Map secondMap = new SecondMap();
         MovementChecker referee;
         List<Character> _enemyManager = new List<Character>();
+        int windowX;
+        int windowY;
 
         public void Start()
         {
+            windowX = Console.WindowHeight;
+            windowY = Console.WindowWidth;
             hud = new Hud();
             player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
@@ -133,6 +137,7 @@ namespace PlayableRPG_MasonSeale
         {
             while (true)
             {
+                FixWindow();
                 //update map
                 currentMap.Update();
                 hud.HudUpdate(player);
@@ -164,8 +169,9 @@ namespace PlayableRPG_MasonSeale
                 bomb.Update(player);
                 //player moves
                 player.Move();
+                //FixWindow();
                 //run all detection if the player hit an enemy
-                foreach(Character enemy in _enemyManager)
+                foreach (Character enemy in _enemyManager)
                 {
                     referee.EnemyAttackMessageDetection(enemy, player, hud);
                     referee.AttackDetection(player, enemy, hud);
@@ -225,6 +231,17 @@ namespace PlayableRPG_MasonSeale
             Console.ReadKey(true);
         }
         //this dose not work and as such is never used.
+        public void FixWindow()
+        {
+            if(windowY != Console.WindowHeight || windowX != Console.WindowWidth)
+            {
+                windowY = Console.WindowHeight;
+                windowX = Console.WindowWidth;
+                Console.Clear();
+                //Console.Write("\u001b[3J\u001b[H\u001b[2J");
+            }
+
+        }
         public void ChangeMap(Map newmap, Map currentmap)
         {
             player.SetPosition(newmap.GetNewMapSpawn().Item1, newmap.GetNewMapSpawn().Item2);
@@ -243,6 +260,7 @@ namespace PlayableRPG_MasonSeale
             Console.WriteLine("Press Esc to quit or R to play again");
         }
     }
+
 
 }
 

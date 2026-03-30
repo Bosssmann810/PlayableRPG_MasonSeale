@@ -162,6 +162,11 @@ namespace PlayableRPG_MasonSeale
                     {
                         continue;
                     }
+                    if (FindEndingLine().GetPositionY() >= Console.WindowHeight)
+                    {
+                        Console.Write("Please increase console size to fit the map on screen.");
+                        return;
+                    }
                     Console.Write(map[i][j]);
                 }
                 Console.WriteLine();

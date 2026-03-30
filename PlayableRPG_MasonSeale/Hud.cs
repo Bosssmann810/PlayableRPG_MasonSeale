@@ -159,6 +159,10 @@ namespace PlayableRPG_MasonSeale
         }
         public void WipeHud(Map map)
         {
+            if(map.FindEndingLine().GetPositionY() > Console.WindowHeight)
+            {
+                return;
+            }
             Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
             Console.WriteLine("                                            ");
             Console.WriteLine("                                            ");

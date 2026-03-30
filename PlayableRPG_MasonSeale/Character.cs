@@ -35,6 +35,10 @@ namespace PlayableRPG_MasonSeale
         //displays the character at the current position.
         public virtual void Update()
         {
+            if(_pos.GetPositionY() >= Console.WindowHeight || _pos.GetPositionX() >= Console.WindowWidth)
+            {
+                return;
+            }
             Console.SetCursorPosition(_pos.GetPositionX(), _pos.GetPositionY());
             Console.ForegroundColor = _color;
             Console.Write(_icon);
