@@ -37,7 +37,7 @@ namespace PlayableRPG_MasonSeale
 
             if(_bombfound == true)
             {
-                Console.WriteLine("You found a bomb");
+                Console.WriteLine("You found a bomb! Press E to drop it");
                 _bombfound = false;
             }
             if(_armorFound == true)
