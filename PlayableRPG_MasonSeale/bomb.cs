@@ -59,6 +59,7 @@ namespace PlayableRPG_MasonSeale
             }
             else
             {
+                Console.Beep(2000, 20);
                 if(_timeLeft > 0)
                 {
                     _timeLeft -= 1;
@@ -77,6 +78,7 @@ namespace PlayableRPG_MasonSeale
         }
         public void Detionate()
         {
+            Console.Beep(100, 30);
             _blownUp = true;
             _active = false;
             _explsoionZone.Add((_pos.GetPositionX() + 1, _pos.GetPositionY() + 1));

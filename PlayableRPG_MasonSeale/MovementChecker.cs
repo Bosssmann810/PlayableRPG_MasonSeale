@@ -20,6 +20,7 @@ namespace PlayableRPG_MasonSeale
             //if the attacker overlaps with an victim
             if (attacker.GetYPos() == victim.GetYPos() && attacker.GetXPos() == victim.GetXPos())
             {
+                Console.Beep(500,20);
                 //don't allow attacker to move
                 attacker.DenyMovement();
                 //and damage the victim
@@ -43,6 +44,7 @@ namespace PlayableRPG_MasonSeale
         {
             if(map.GetLavaSpots().Contains((entity.GetXPos(), entity.GetYPos())))
             {
+                Console.Beep(500, 20);
                 entity.PenDamage(1);
                 hud.LavaMessage();
             }
@@ -58,6 +60,7 @@ namespace PlayableRPG_MasonSeale
         {
             if (map.GetHealthSpots().Contains((player.GetXPos(), player.GetYPos())))
             {
+                Console.Beep(2000, 20);
                 player.Restore();
                 hud.HealMessage();
             }
@@ -67,6 +70,7 @@ namespace PlayableRPG_MasonSeale
         {
             if (map.GetGoldSpots().Contains((player.GetXPos(), player.GetYPos())))
             {
+                Console.Beep(2000, 20);
                 map.RemoveGold(player.PositionCheck());
                 player.AddGold();
                 hud.GoldMessage();
@@ -81,6 +85,7 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.BombCollected();
                 bomb.PickedUp(player);
@@ -106,6 +111,7 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.ChangeColor(ConsoleColor.Cyan);
                 player.ChangeDefense(1);
@@ -122,6 +128,7 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.SwordCollected();
                 map.CollectSword();

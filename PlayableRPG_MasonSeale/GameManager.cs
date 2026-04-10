@@ -65,6 +65,7 @@ namespace PlayableRPG_MasonSeale
 
         public void Start()
         {
+            Console.Beep(4000, 30);
             windowX = Console.WindowHeight;
             windowY = Console.WindowWidth;
             hud = new Hud();
@@ -143,6 +144,7 @@ namespace PlayableRPG_MasonSeale
                 hud.HudUpdate(player);
                 if (player.AliveChecker() == false)
                 {
+                    Console.Beep(200, 40);
                     Console.Clear();
                     currentMap.Update();
                     Console.SetCursorPosition(currentMap.FindEndingLine().GetPositionX(), currentMap.FindEndingLine().GetPositionY());
@@ -192,6 +194,9 @@ namespace PlayableRPG_MasonSeale
                 referee.LavaCheck(player, currentMap, hud);
                 if(player.CheckGold() >= 26)
                 {
+                    Console.Beep(4000, 20);
+                    Console.Beep(2000, 20);
+                    Console.Beep(4000, 20);
                     Console.Clear();
                     currentMap.Update();
                     hud.WinMessage();

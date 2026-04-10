@@ -17,3 +17,4 @@ C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\Playabl
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb
 C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe.config
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
+C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
