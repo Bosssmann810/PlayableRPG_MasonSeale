@@ -56,6 +56,41 @@ namespace PlayableRPG_MasonSeale
                 entity.DenyMovement();
             }
         }
+        public void PlayerShopCheck(Player player,Map map, Hud hud)
+        {
+            int _itemOneCost = 0;
+            int _itemTwoCost = 0;
+            int _itemThreeCost = 0;
+            if (map.GetHealthSpots().Contains((player.GetXPos(), player.GetYPos())))
+            {
+                ConsoleKeyInfo key = Console.ReadKey();
+                if (key.Key == ConsoleKey.D1)
+                {
+                    if (player.CheckGold() >= _itemOneCost)
+                    {
+                        player.Restore();
+                        _itemOneCost += 1;
+                    }
+                }
+                if (key.Key == ConsoleKey.D2)
+                {
+                    if (player.CheckGold() >= _itemTwoCost)
+                    {
+
+                        player.ChangeDamage(player.GetDamage() + 1);
+                        _itemTwoCost += 1;
+                    }
+                }
+                if (key.Key == ConsoleKey.D3)
+                {
+                    if (player.CheckGold() >= _itemThreeCost)
+                    {
+                        player.Restore();
+                        _itemThreeCost += 1;
+                    }
+                }
+            }
+        }
         public void PlayerHealCheck(Player player, Map map, Hud hud)
         {
             if (map.GetHealthSpots().Contains((player.GetXPos(), player.GetYPos())))

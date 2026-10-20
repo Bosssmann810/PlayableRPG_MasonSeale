@@ -18,3 +18,12 @@ C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\Playabl
 C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe.config
 C:\mason unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
 C:\Users\seale\Desktop\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\map.txt
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe.config
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe
+C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb

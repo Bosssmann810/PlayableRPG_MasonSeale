@@ -14,6 +14,7 @@ namespace PlayableRPG_MasonSeale
         List<(int, int)> _healSpots = new List<(int, int)>();
         List<(int, int)> _lavaSpots = new List<(int, int)>();
         List<(int, int)> _goldSpots = new List<(int, int)>();
+        List<(int, int)> _shopSpots = new List<(int, int)>();
         List<(int, int)> _goldManager = new List<(int, int)>();
         List<(int, int)> _itemManager = new List<(int, int)>();
         (int, int) _bombLocation;
@@ -53,6 +54,10 @@ namespace PlayableRPG_MasonSeale
                     {
                         _swordLocation = (j, i);
                         _itemManager.Add((j, i));
+                    }
+                    if (map[i][j] == '#')
+                    {
+                        _shopSpots.Add((j, i));
                     }
                     if (map[i][j] == ':')
                     {
@@ -121,7 +126,7 @@ namespace PlayableRPG_MasonSeale
                     }
                     if (map[i][j] == '#')
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                     }
                     if (map[i][j] == '*')
                     {
@@ -186,6 +191,11 @@ namespace PlayableRPG_MasonSeale
         public List<(int,int)> GetHealthSpots()
         {
             return _healSpots;
+        }
+
+        public List<(int,int)> GetShopSpots()
+        {
+            return _shopSpots;
         }
 
         public List<(int, int)> GetLavaSpots()

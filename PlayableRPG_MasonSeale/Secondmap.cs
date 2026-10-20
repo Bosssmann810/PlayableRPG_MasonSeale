@@ -14,6 +14,7 @@ namespace PlayableRPG_MasonSeale
             List<(int, int)> _healSpots = new List<(int, int)>();
             List<(int, int)> _lavaSpots = new List<(int, int)>();
             List<(int, int)> _goldSpots = new List<(int, int)>();
+            List<(int,int)> _shopSpots = new List<(int, int)>();
             (int, int) _hatLocation;
             (int, int) _swordLocation;
             (int, int) _armorLocation;
@@ -41,6 +42,10 @@ namespace PlayableRPG_MasonSeale
                         if (map[i][j] == '+')
                         {
                             _healSpots.Add((j, i));
+                        }
+                        if (map[i][j] == '#')
+                        {
+                            _shopSpots.Add((j, i));
                         }
                         if (map[i][j] == '*')
                         {

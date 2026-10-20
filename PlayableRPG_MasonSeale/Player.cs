@@ -140,6 +140,10 @@ namespace PlayableRPG_MasonSeale
         {
             _goldAmount += 1;
         }
+        public void MinusGold()
+        {
+            _goldAmount -= 1;
+        }
         public int CheckGold()
         {
             return _goldAmount;
