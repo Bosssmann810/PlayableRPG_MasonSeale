@@ -12,12 +12,16 @@ namespace PlayableRPG_MasonSeale
         bool _AtkMessage = false;
         bool _healMessage = false;
         bool _lavaMessage = false;
+        bool _isShopMessage = false;
+        bool _isItemMessage = false;
         bool _winMessage = false;
         bool _enemyDeathMessage = false;
         bool _enemyAttack = false;
         bool _bombfound = false;
         bool _swordFound = false;
         bool _armorFound = false;
+        string _itemMessage;
+        List<string> _itemsToBuy = new List<string>();
         Character _attacker = new Character(0,0,1,ConsoleColor.Black,"i",1);
         Character _victim = new Character(0, 0, 1, ConsoleColor.Black, "i", 1);
         List<(Character a, Character v)> _attackEvents = new List<(Character, Character)>();
@@ -55,6 +59,19 @@ namespace PlayableRPG_MasonSeale
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("You Found Some gold");
                 _goldMessage = false;
+            }
+            if(_isItemMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"{player.ShowName()} bought and used {_itemMessage}");
+                _isItemMessage = false;
+            }
+            if(_isShopMessage == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"What would you like to buy");
+                Console.WriteLine($"press 1 for {_itemsToBuy[0]}, 2 for more {_itemsToBuy[1]}, 3 for {_itemsToBuy[2]}");
+                _isShopMessage = false;
             }
             if (_healMessage == true)
             {
@@ -118,6 +135,18 @@ namespace PlayableRPG_MasonSeale
             _enemyDeathMessage = true;
         }
 
+        public void AtShopMessage(List<string> itemsNames)
+        {
+            
+            _itemsToBuy = itemsNames;
+            _isShopMessage = true;
+        }
+        public void BuyItemMessage(string item)
+        {
+            _isItemMessage = true;
+            _itemMessage = item;
+        }
+
         public void BombMessage()
         {
             _bombfound = true;
@@ -164,15 +193,15 @@ namespace PlayableRPG_MasonSeale
                 return;
             }
             Console.SetCursorPosition(map.FindEndingLine().GetPositionX(), map.FindEndingLine().GetPositionY());
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
-            Console.WriteLine("                                            ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
+            Console.WriteLine("                                                                                    ");
 
         }
     }

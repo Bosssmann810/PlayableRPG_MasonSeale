@@ -60,7 +60,7 @@ namespace PlayableRPG_MasonSeale
         Map secondMap = new SecondMap();
         MovementChecker referee;
         List<Character> _enemyManager = new List<Character>();
-        Shop shop;
+        
         int enemyCount = 0;
         int windowX;
         int windowY;
@@ -70,7 +70,7 @@ namespace PlayableRPG_MasonSeale
             Console.Beep(4000, 30);
             windowX = Console.WindowHeight;
             windowY = Console.WindowWidth;
-            shop = new Shop(player);
+            
             hud = new Hud();
             player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
             enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
@@ -201,7 +201,8 @@ namespace PlayableRPG_MasonSeale
                 referee.PlayerHealCheck(player, currentMap, hud);
                 referee.PlayerGoldCheck(player, currentMap, hud);
                 referee.LavaCheck(player, currentMap, hud);
-                if(enemyCount >= 1)
+                referee.PlayerShopCheck(player, currentMap, hud);
+                if(enemyCount >= 15)
                 {
                     Console.Beep(4000, 20);
                     Console.Beep(2000, 20);
