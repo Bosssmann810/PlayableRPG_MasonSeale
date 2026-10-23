@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\users\\mgc72\\documents\\school projects\\playablerpg_masonseale\\playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\movementchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,15 +31,11 @@
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\beefyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\users\\mgc72\\documents\\school projects\\playablerpg_masonseale\\playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\users\\mgc72\\documents\\school projects\\playablerpg_masonseale\\playablerpg_masonseale\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,84 +95,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Shop.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Shop.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Shop.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Shop.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\Shop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T22:05:11.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "map.txt",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\map.txt",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\map.txt",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\map.txt",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\map.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-11T12:09:50.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Map.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Map.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Map.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\Map.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAAswMMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T13:33:04.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Player.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\Player.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAmwGoAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:25:46.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Program.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Program.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Program.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:37:53.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BeefyEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T14:07:41.309Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -212,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Character.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Character.cs",
@@ -220,38 +142,11 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Character.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAqwGsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:38:39.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:38:39.575Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\GameManager.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\GameManager.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\GameManager.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\GameManager.cs",
-              "ViewState": "AgIAALsAAAAAAAAAAAAAAMwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T13:06:10.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Enemy.cs",
-              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Enemy.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Enemy.cs",
-              "RelativeToolTip": "PlayableRPG_MasonSeale\\Enemy.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwBUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T17:24:07.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Hud.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Hud.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Hud.cs",
@@ -264,7 +159,105 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\GameManager.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\GameManager.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\GameManager.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\GameManager.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAK4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T13:06:10.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BeefyEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T14:07:41.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Program.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Program.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Program.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:37:53.565Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Player.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\Player.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T12:25:46.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Map.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Map.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Map.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\Map.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAswMMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T13:33:04.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "map.txt",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\map.txt",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\map.txt",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\map.txt",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\map.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-11T12:09:50.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Shop.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Shop.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Shop.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Shop.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\Shop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T22:05:11.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Enemy.cs",
+              "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Enemy.cs",
+              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Enemy.cs",
+              "RelativeToolTip": "PlayableRPG_MasonSeale\\Enemy.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwBUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T17:24:07.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MovementChecker.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\MovementChecker.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\MovementChecker.cs",
@@ -272,8 +265,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\MovementChecker.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAEEAAACSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:16:09.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T14:16:09.504Z"
             },
             {
               "$type": "Document",
@@ -285,8 +277,7 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\FastEnemy.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAIwDoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:33:33.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T12:33:33.603Z"
             },
             {
               "$type": "Document",

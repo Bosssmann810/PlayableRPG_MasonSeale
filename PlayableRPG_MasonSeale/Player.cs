@@ -13,7 +13,7 @@ namespace PlayableRPG_MasonSeale
         bool _foundBomb = false;
         int _facingDirection;
         bool _foundSword = false;
-        int _goldAmount = 0;
+        int _goldAmount = 20;
         bomb _bomb;
         public Player(int damage, ConsoleColor color, string icon, int startingXPos, int startingYPos, int maxHP) : base(startingXPos, startingYPos, maxHP, color,icon,damage)
         {

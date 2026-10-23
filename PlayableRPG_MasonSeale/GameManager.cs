@@ -166,12 +166,13 @@ namespace PlayableRPG_MasonSeale
                 player.Update();
                 foreach(Character enemy in _enemyManager)
                 {
-                    if (enemy.AliveChecker() == false)
-                    {
-                        enemyCount += 1;
-                    }
+                    
                     if (enemy.AliveChecker())
                     {
+                        if (enemy.AliveChecker() == false)
+                        {
+                            enemyCount += 1;
+                        }
                         enemy.Update();
                         
                         
