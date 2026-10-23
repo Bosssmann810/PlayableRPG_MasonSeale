@@ -3,10 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mgc72\\Documents\\school Projects\\ProprietaryAlgorithmGageMcKenzie\\Assets\\WaveFunctionCollapse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\users\\mgc72\\documents\\school projects\\playablerpg_masonseale\\playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -14,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|c:\\users\\mgc72\\documents\\school projects\\playablerpg_masonseale\\playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5191ED-AEEB-486F-AED8-CCC0FB3871CC}|PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale.csproj|solutionrelative:playablerpg_masonseale\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -81,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -101,20 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WaveFunctionCollapse.cs",
-              "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\ProprietaryAlgorithmGageMcKenzie\\Assets\\WaveFunctionCollapse.cs",
-              "RelativeDocumentMoniker": "..\\ProprietaryAlgorithmGageMcKenzie\\Assets\\WaveFunctionCollapse.cs",
-              "ToolTip": "C:\\Users\\mgc72\\Documents\\school Projects\\ProprietaryAlgorithmGageMcKenzie\\Assets\\WaveFunctionCollapse.cs",
-              "RelativeToolTip": "..\\ProprietaryAlgorithmGageMcKenzie\\Assets\\WaveFunctionCollapse.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAkwEIAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T11:20:35.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Secondmap.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Secondmap.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Secondmap.cs",
@@ -126,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "bomb.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\bomb.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\bomb.cs",
@@ -138,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "Health.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Health.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Health.cs",
@@ -150,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Character.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Character.cs",
@@ -162,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Hud.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Hud.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Hud.cs",
@@ -170,12 +154,11 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Hud.cs",
               "ViewState": "AgIAALEAAAAAAAAAAAAAAMsAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T13:15:17.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T13:15:17.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\GameManager.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\GameManager.cs",
@@ -188,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BeefyEnemy.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\BeefyEnemy.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\BeefyEnemy.cs",
@@ -200,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Program.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Program.cs",
@@ -212,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Player.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Player.cs",
@@ -220,12 +203,11 @@
               "RelativeToolTip": "PlayableRPG_MasonSeale\\Player.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAqwA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:25:46.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T12:25:46.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Map.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Map.cs",
@@ -237,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "map.txt",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\map.txt",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\map.txt",
@@ -249,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Shop.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Shop.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Shop.cs",
@@ -261,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Enemy.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Enemy.cs",
@@ -273,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MovementChecker.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\MovementChecker.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\MovementChecker.cs",
@@ -285,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "FastEnemy.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\FastEnemy.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\FastEnemy.cs",
@@ -297,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Position.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\Position.cs",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\Position.cs",
@@ -309,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "secondmap.txt",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\school Projects\\PlayableRPG_MasonSeale\\PlayableRPG_MasonSeale\\secondmap.txt",
               "RelativeDocumentMoniker": "PlayableRPG_MasonSeale\\secondmap.txt",

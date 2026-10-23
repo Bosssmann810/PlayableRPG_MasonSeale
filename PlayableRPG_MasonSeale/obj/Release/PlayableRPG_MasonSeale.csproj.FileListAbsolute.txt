@@ -32,3 +32,8 @@ C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_Maso
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\map.txt
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe.config
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.pdb
