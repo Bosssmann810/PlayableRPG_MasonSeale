@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace PlayableRPG_MasonSeale
 {
@@ -14,6 +17,9 @@ namespace PlayableRPG_MasonSeale
             bool playing = true;
             Console.CursorVisible = false;
             GameManager _gameManager = GameManager.Instance;
+            //Settings stats = new Settings();
+            //string jsonString = JsonSerializer.Serialize(stats);
+            //File.WriteAllText("Settings.Json", jsonString);
             while (true)
             {
                 _gameManager.Start();

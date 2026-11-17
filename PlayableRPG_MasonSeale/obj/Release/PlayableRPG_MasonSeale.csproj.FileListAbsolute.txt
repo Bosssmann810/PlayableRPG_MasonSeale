@@ -37,3 +37,33 @@ C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_Maso
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe.config
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe
 C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\secondmap.txt
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\map.txt
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe.config
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.exe
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\PlayableRPG_MasonSeale.pdb
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\Newtonsoft.Json.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Buffers.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.IO.Pipelines.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Memory.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Numerics.Vectors.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Text.Encodings.Web.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Text.Json.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\Newtonsoft.Json.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Buffers.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.IO.Pipelines.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Memory.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Numerics.Vectors.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Text.Encodings.Web.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Text.Json.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\Playable.CEC2D217.Up2Date
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.exe
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Release\PlayableRPG_MasonSeale.pdb

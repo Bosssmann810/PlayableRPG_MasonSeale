@@ -5,6 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace PlayableRPG_MasonSeale
 {
@@ -150,10 +153,11 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                var stats = JsonSerializer.Deserialize<Settings>(File.ReadAllText("Settings.Json"));
                 Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.ChangeColor(ConsoleColor.Cyan);
-                player.ChangeDefense(1);
+                player.ChangeDefense(stats.armorDefense);
                 map.CollectArmor();
                 hud.ArmorMessage();
                 _armorfound = true;
@@ -167,11 +171,12 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                var stats = JsonSerializer.Deserialize<Settings>(File.ReadAllText("Settings.Json"));
                 Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.SwordCollected();
                 map.CollectSword();
-                player.ChangeDamage(5);
+                player.ChangeDamage(stats.swordDamage);
                 hud.SwordMessage();
                 _swordFound = true;
             }
