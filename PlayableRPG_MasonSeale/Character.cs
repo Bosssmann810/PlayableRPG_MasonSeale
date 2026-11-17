@@ -105,6 +105,10 @@ namespace PlayableRPG_MasonSeale
         {
             _defense = newDefense;
         }
+        public int CurrentDefense()
+        {
+            return _defense;
+        }
 
         public void Enable()
         {

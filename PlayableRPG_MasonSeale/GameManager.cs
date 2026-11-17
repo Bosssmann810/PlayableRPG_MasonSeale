@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace PlayableRPG_MasonSeale
 {
@@ -60,74 +63,77 @@ namespace PlayableRPG_MasonSeale
         Map secondMap = new SecondMap();
         MovementChecker referee;
         List<Character> _enemyManager = new List<Character>();
-        Shop shop;
+        
         int enemyCount = 0;
         int windowX;
         int windowY;
 
+        
+
         public void Start()
         {
+            Settings stats = JsonSerializer.Deserialize<Settings>(File.ReadAllText("Settings.Json")); // relative file path -- meaning JSON file is in same folder as .exe file
             Console.Beep(4000, 30);
             windowX = Console.WindowHeight;
             windowY = Console.WindowWidth;
-            shop = new Shop(player);
+            
             hud = new Hud();
-            player = new Player(damage: 1, color: ConsoleColor.Blue, "0", 2, 4, 10);
-            enemy = new Enemy(player, 10, 8, 10, ConsoleColor.Red, "i", 2);
+            player = new Player(damage: stats.playerDamage, color: stats.playerColor, stats.playerIcon, 2, 4, stats.playerHealth);
+            enemy = new Enemy(player, 10, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(enemy);
-            secondEnemy = new Enemy(player, 15, 17, 10, ConsoleColor.Red, "i", 2);
+            secondEnemy = new Enemy(player, 15, 17, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(secondEnemy);
-            speedyEnemy = new FastEnemy(player, 3, 16, 5, ConsoleColor.Magenta, "x", 1);
+            speedyEnemy = new FastEnemy(player, 3, 16, stats.fastEnemyHealth, stats.fastEnemyColor, stats.fastEnemyIcon, stats.fastEnemyDamage);
             _enemyManager.Add(speedyEnemy);
-            secondSpeedEnemy = new FastEnemy(player, 42, 2, 5, ConsoleColor.Magenta, "x", 1);
+            secondSpeedEnemy = new FastEnemy(player, 42, 2, stats.fastEnemyHealth, stats.fastEnemyColor, stats.fastEnemyIcon, stats.fastEnemyDamage);
             _enemyManager.Add(secondSpeedEnemy);
-            beefyEnemy = new BeefyEnemy(player, 45, 10, 20, ConsoleColor.DarkRed, "&", 2);
+            beefyEnemy = new BeefyEnemy(player, 45, 10, stats.beefyEnemyHealth, stats.beefyEnemyColor, stats.beefyEnemyIcon, stats.beefyEnemyDamage);
             _enemyManager.Add(beefyEnemy);
-            hoard1 = new Enemy(player, 52, 5, 10, ConsoleColor.Red, "i", 2);
+            hoard1 = new Enemy(player, 52, 5, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard1);
-            hoard2 = new Enemy(player, 53, 5, 10, ConsoleColor.Red, "i", 2);
+            hoard2 = new Enemy(player, 53, 5, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard2);
-            hoard3 = new Enemy(player, 54, 5, 10, ConsoleColor.Red, "i", 2);
+            hoard3 = new Enemy(player, 54, 5, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard3);
-            hoard4 = new Enemy(player, 55, 5, 10, ConsoleColor.Red, "i", 2);
+            hoard4 = new Enemy(player, 55, 5, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard4);
-            hoard5 = new Enemy(player, 56, 5, 10, ConsoleColor.Red, "i", 2);
+            hoard5 = new Enemy(player, 56, 5, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard5);
-            hoard6 = new Enemy(player, 52, 6, 10, ConsoleColor.Red, "i", 2);
+            hoard6 = new Enemy(player, 52, 6, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard6);
-            hoard7 = new Enemy(player, 53, 6, 10, ConsoleColor.Red, "i", 2);
+            hoard7 = new Enemy(player, 53, 6, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard7);
-            hoard8 = new Enemy(player, 54, 6, 10, ConsoleColor.Red, "i", 2);
+            hoard8 = new Enemy(player, 54, 6, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard8);
-            hoard9 = new Enemy(player, 55, 6, 10, ConsoleColor.Red, "i", 2);
+            hoard9 = new Enemy(player, 55, 6, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard9);
-            hoard10 = new Enemy(player, 56, 6, 10, ConsoleColor.Red, "i", 2);
+            hoard10 = new Enemy(player, 56, 6, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard10);
-            hoard11 = new Enemy(player, 52, 7, 10, ConsoleColor.Red, "i", 2);
+            hoard11 = new Enemy(player, 52, 7, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard11);
-            hoard12 = new Enemy(player, 53, 7, 10, ConsoleColor.Red, "i", 2);
+            hoard12 = new Enemy(player, 53, 7, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard12);
-            hoard13 = new Enemy(player, 54, 7, 10, ConsoleColor.Red, "i", 2);
+            hoard13 = new Enemy(player, 54, 7, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard13);
-            hoard14 = new Enemy(player, 55, 7, 10, ConsoleColor.Red, "i", 2);
+            hoard14 = new Enemy(player, 55, 7, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard14);
-            hoard15 = new Enemy(player, 56, 7, 10, ConsoleColor.Red, "i", 2);
+            hoard15 = new Enemy(player, 56, 7, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard15);
-            hoard16 = new Enemy(player, 52, 8, 10, ConsoleColor.Red, "i", 2);
+            hoard16 = new Enemy(player, 52, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard16);
-            hoard17 = new Enemy(player, 53, 8, 10, ConsoleColor.Red, "i", 2);
+            hoard17 = new Enemy(player, 53, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard16);
-            hoard18 = new Enemy(player, 54, 8, 10, ConsoleColor.Red, "i", 2);
+            hoard18 = new Enemy(player, 54, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard18);
-            hoard19 = new Enemy(player, 55, 8, 10, ConsoleColor.Red, "i", 2);
+            hoard19 = new Enemy(player, 55, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard19);
-            hoard20 = new Enemy(player, 56, 8, 10, ConsoleColor.Red, "i", 2);
+            hoard20 = new Enemy(player, 56, 8, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard20);
-            hoard21 = new Enemy(player, 52, 9, 10, ConsoleColor.Red, "i", 2);
+            hoard21 = new Enemy(player, 52, 9, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard21);
-            hoard22 = new Enemy(player, 53, 9, 10, ConsoleColor.Red, "i", 2);
+            hoard22 = new Enemy(player, 53, 9, stats.enemyHealth, stats.enemyColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(hoard22);
-            fred = new Enemy(player, 54, 9, 10, ConsoleColor.DarkRed, "i", 2);
+            fred = new Enemy(player, 54, 9, stats.enemyHealth, stats.fredColor, stats.enemyIcon, stats.enemyDamage);
             _enemyManager.Add(fred);
 
             currentMap = new Map();
@@ -166,12 +172,13 @@ namespace PlayableRPG_MasonSeale
                 player.Update();
                 foreach(Character enemy in _enemyManager)
                 {
-                    if (enemy.AliveChecker() == false)
-                    {
-                        enemyCount += 1;
-                    }
+                    
                     if (enemy.AliveChecker())
                     {
+                        if (enemy.AliveChecker() == false)
+                        {
+                            enemyCount += 1;
+                        }
                         enemy.Update();
                         
                         
@@ -201,7 +208,8 @@ namespace PlayableRPG_MasonSeale
                 referee.PlayerHealCheck(player, currentMap, hud);
                 referee.PlayerGoldCheck(player, currentMap, hud);
                 referee.LavaCheck(player, currentMap, hud);
-                if(enemyCount >= 1)
+                referee.PlayerShopCheck(player, currentMap, hud);
+                if(enemyCount >= 15)
                 {
                     Console.Beep(4000, 20);
                     Console.Beep(2000, 20);

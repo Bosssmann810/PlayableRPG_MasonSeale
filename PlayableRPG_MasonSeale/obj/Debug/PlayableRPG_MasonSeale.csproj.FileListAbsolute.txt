@@ -27,3 +27,43 @@ C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSea
 C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
 C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
 C:\Users\w0526843\Documents\projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe.config
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\secondmap.txt
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\map.txt
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe.config
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\mgc72\Documents\school Projects\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\secondmap.txt
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\map.txt
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe.config
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.AssemblyReference.cache
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.csproj.CoreCompileInputs.cache
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.exe
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\PlayableRPG_MasonSeale.pdb
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\Newtonsoft.Json.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Buffers.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.IO.Pipelines.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Memory.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Text.Json.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\Newtonsoft.Json.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Buffers.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.IO.Pipelines.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Memory.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Text.Json.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\W0522339\Unity\PlayableRPG_MasonSeale\PlayableRPG_MasonSeale\obj\Debug\Playable.CEC2D217.Up2Date

@@ -5,6 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace PlayableRPG_MasonSeale
 {
@@ -58,11 +61,12 @@ namespace PlayableRPG_MasonSeale
         }
         public void PlayerShopCheck(Player player,Map map, Hud hud)
         {
-            int _itemOneCost = 0;
-            int _itemTwoCost = 0;
-            int _itemThreeCost = 0;
-            if (map.GetHealthSpots().Contains((player.GetXPos(), player.GetYPos())))
+            int _itemOneCost = 2;
+            int _itemTwoCost = 5;
+            int _itemThreeCost = 10;
+            if (map.GetShopSpots().Contains((player.GetXPos(), player.GetYPos())))
             {
+                hud.AtShopMessage(new List<string>(){$"Health Cost: {_itemOneCost}", $"Damage Cost: {_itemTwoCost}", $"Resitance Cost: {_itemThreeCost}" });
                 ConsoleKeyInfo key = Console.ReadKey();
                 if (key.Key == ConsoleKey.D1)
                 {
@@ -70,6 +74,7 @@ namespace PlayableRPG_MasonSeale
                     {
                         player.Restore();
                         _itemOneCost += 1;
+                        hud.BuyItemMessage("Health ");
                     }
                 }
                 if (key.Key == ConsoleKey.D2)
@@ -79,14 +84,16 @@ namespace PlayableRPG_MasonSeale
 
                         player.ChangeDamage(player.GetDamage() + 1);
                         _itemTwoCost += 1;
+                        hud.BuyItemMessage("Damage");
                     }
                 }
                 if (key.Key == ConsoleKey.D3)
                 {
                     if (player.CheckGold() >= _itemThreeCost)
                     {
-                        player.Restore();
+                        player.ChangeDefense(player.CurrentDefense() + 1);
                         _itemThreeCost += 1;
+                        hud.BuyItemMessage("Reistance");
                     }
                 }
             }
@@ -146,10 +153,11 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                var stats = JsonSerializer.Deserialize<Settings>(File.ReadAllText("Settings.Json"));
                 Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.ChangeColor(ConsoleColor.Cyan);
-                player.ChangeDefense(1);
+                player.ChangeDefense(stats.armorDefense);
                 map.CollectArmor();
                 hud.ArmorMessage();
                 _armorfound = true;
@@ -163,11 +171,12 @@ namespace PlayableRPG_MasonSeale
                 {
                     return;
                 }
+                var stats = JsonSerializer.Deserialize<Settings>(File.ReadAllText("Settings.Json"));
                 Console.Beep(2000, 20);
                 player.DenyMovement();
                 player.SwordCollected();
                 map.CollectSword();
-                player.ChangeDamage(5);
+                player.ChangeDamage(stats.swordDamage);
                 hud.SwordMessage();
                 _swordFound = true;
             }
